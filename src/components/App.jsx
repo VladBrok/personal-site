@@ -94,7 +94,7 @@ export default function App() {
               Projects
             </h2>
 
-            <div className="grid auto-rows-fr gap-4 md:grid-cols-2 xl:grid-cols-3">
+            <div className="grid auto-rows-fr gap-10 md:grid-cols-2 xl:grid-cols-3">
               <div className="flex flex-col items-center max-w-xs m-auto shadow-lg shadow-gray rounded-2xl h-full">
                 <img
                   className="w-full block rounded-t-2xl"
