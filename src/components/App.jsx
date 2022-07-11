@@ -23,7 +23,7 @@ export default function App() {
     <>
       <header className="fixed w-full top-0 left-0 p-2 flex justify-between bg-white shadow-md sm:p-4">
         <a className="text-2xl" href="/">
-          VladBrok
+          Vlad<span className="text-blue">Brok</span>
         </a>
 
         {/* todo: extract menu class */}
@@ -34,7 +34,7 @@ export default function App() {
           <ul className="sm:flex md:gap-2">
             <li>
               <Link
-                className="p-4 inline-block hover:underline hover:cursor-pointer sm:py-1"
+                className="p-4 inline-block hover:underline hover:cursor-pointer hover:text-blue sm:py-1"
                 to="home"
                 smooth={true}
                 offset={-300}
@@ -45,7 +45,7 @@ export default function App() {
             </li>
             <li>
               <Link
-                className="p-4 inline-block hover:underline hover:cursor-pointer sm:py-1"
+                className="p-4 inline-block hover:underline hover:cursor-pointer hover:text-blue sm:py-1"
                 to="projects"
                 smooth={true}
                 offset={-70}
@@ -56,7 +56,7 @@ export default function App() {
             </li>
             <li>
               <Link
-                className="p-4 inline-block hover:underline hover:cursor-pointer sm:py-1"
+                className="p-4 inline-block hover:underline hover:cursor-pointer hover:text-blue sm:py-1"
                 to="contact"
                 smooth={true}
                 offset={-70}
@@ -72,13 +72,15 @@ export default function App() {
       <main className="mx-6">
         <section className="min-h-screen flex items-center">
           <Element name="home">
-            <h1 className="font-semibold text-4xl">
-              <span className="text-gray text-xl mt-2 font-normal block">
+            <h1 className="font-semibold text-4xl my-4">
+              <span className="text-gray text-xl font-normal block">
                 Hi, my name is
               </span>{" "}
-              Vladislav Brakalo
+              <span className="decoration-blue underline underline-offset-2">
+                Vladislav Brakalo
+              </span>
             </h1>
-            <p className="text-gray text-xl mt-2">
+            <p className="text-gray text-xl -mt-1">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
               praesentium, reprehenderit quos a voluptatibus voluptatum ipsa
               quia nemo inventore eum.
@@ -88,7 +90,9 @@ export default function App() {
 
         <section className="min-h-screen text-center">
           <Element name="projects">
-            <h2 className="font-semibold text-3xl my-8">Projects</h2>
+            <h2 className="font-semibold text-3xl my-8 decoration-blue underline underline-offset-2">
+              Projects
+            </h2>
 
             <div className="flex flex-col items-center max-w-xs m-auto shadow-lg shadow-gray rounded-2xl">
               <img
@@ -130,8 +134,13 @@ export default function App() {
 
         <section className="min-h-screen text-center flex items-center justify-center mt-28">
           <Element name="contact">
-            <h2 className="font-semibold text-3xl">Contact me</h2>
-            <form className="my-4 text-left text-gray" onSubmit={handleSubmit}>
+            <h2 className="font-semibold text-3xl decoration-blue underline underline-offset-2">
+              Contact me
+            </h2>
+            <form
+              className="my-4 text-left text-gray text-lg"
+              onSubmit={handleSubmit}
+            >
               <div>
                 <label htmlFor="name">
                   Name:
@@ -175,15 +184,21 @@ export default function App() {
                   rows="6"
                 ></textarea>
               </div>
-              <div className="text-center">
-                <button>Send Message</button>
+              <div>
+                <button className="block w-full px-2 py-1 text-white bg-blue rounded-md text-center my-6 hover:[filter:brightness(110%)]">
+                  Send Message
+                </button>
               </div>
             </form>
           </Element>
         </section>
       </main>
 
-      <footer></footer>
+      <footer className="border-t-[2px] border-gray text-center">
+        <p className="text-gray text-lg m-6">
+          Copyright (c) 2022 Vladislav Brakalo
+        </p>
+      </footer>
     </>
   );
 }
