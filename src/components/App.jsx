@@ -194,8 +194,20 @@ export default function App() {
         </section>
       </main>
 
-      <footer className="border-t-[2px] border-gray text-center">
-        <p className="text-gray text-lg m-6">
+      <footer className="border-t-[2px] border-gray text-center p-6 mt-6">
+        {/* dup: devicon container ?*/}
+        <div className="flex justify-center">
+          {/* dup: devicon ? */}
+          <div className="flex items-center text-lg mx-2 my-1 group relative">
+            <a href="https://github.com/VladBrok/">
+              <i className="devicon-github-plain colored text-3xl"></i>
+            </a>
+            <span className="absolute left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 group-hover:mb-14 [transition:opacity_0.6s,margin_0.6s] pointer-events-none">
+              Github
+            </span>
+          </div>
+        </div>
+        <p className="text-gray text-lg mt-4">
           Copyright (c) 2022 Vladislav Brakalo
         </p>
       </footer>
