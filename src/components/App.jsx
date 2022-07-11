@@ -5,8 +5,13 @@ import { Link, Element } from "react-scroll";
 export default function App() {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
-  function handleMenuClick() {
+  function handleMenuButtonClick() {
     setMenuIsOpen(value => !value);
+  }
+
+  function handleMenuItemClick() {
+    console.log("active");
+    setMenuIsOpen(false);
   }
 
   const menuDisplay = menuIsOpen ? "block" : "hidden";
@@ -19,9 +24,9 @@ export default function App() {
         </a>
 
         {/* todo: extract menu class */}
-        <MobileMenuButton isOpen={menuIsOpen} onClick={handleMenuClick} />
+        <MobileMenuButton isOpen={menuIsOpen} onClick={handleMenuButtonClick} />
         <nav
-          className={`${menuDisplay} fixed top-0 left-0 z-40 w-screen h-screen flex flex-col items-center justify-center text-center text-3xl text-gray sm:relative sm:w-fit sm:h-fit sm:text-xl sm:block`}
+          className={`${menuDisplay} fixed top-0 left-0 z-40 w-screen h-screen flex flex-col items-center justify-center text-center text-3xl text-gray bg-white sm:relative sm:w-fit sm:h-fit sm:text-xl sm:block`}
         >
           <ul className="sm:flex md:gap-2">
             <li>
@@ -30,6 +35,7 @@ export default function App() {
                 to="home"
                 smooth={true}
                 offset={-300}
+                onClick={handleMenuItemClick}
               >
                 Home
               </Link>
@@ -40,6 +46,7 @@ export default function App() {
                 to="projects"
                 smooth={true}
                 offset={-100}
+                onClick={handleMenuItemClick}
               >
                 Projects
               </Link>
@@ -50,6 +57,7 @@ export default function App() {
                 to="contact"
                 smooth={true}
                 offset={-100}
+                onClick={handleMenuItemClick}
               >
                 Contact
               </Link>
@@ -58,7 +66,7 @@ export default function App() {
         </nav>
       </header>
 
-      <main className="mx-4">
+      <main className="mx-6">
         <section className="min-h-screen flex items-center">
           <Element name="home">
             <h1 className="font-semibold text-4xl">
