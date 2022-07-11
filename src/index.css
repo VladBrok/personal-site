@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .bar {
+    @apply bg-black w-full h-[0.35rem] rounded [transition:all_0.5s_ease-in-out];
+  }
+}
