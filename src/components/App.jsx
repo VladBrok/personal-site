@@ -42,7 +42,29 @@ export default function App() {
         </nav>
       </header>
 
-      <main></main>
+      <main className="mx-4">
+        <section className="min-h-screen mt-28">
+          <h1 className="font-semibold text-4xl">
+            <span className="text-gray text-xl mt-2 font-normal block">
+              Hi, my name is
+            </span>{" "}
+            Vladislav Brakalo
+          </h1>
+          <p className="text-gray text-xl mt-2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+            praesentium, reprehenderit quos a voluptatibus voluptatum ipsa quia
+            nemo inventore eum.
+          </p>
+        </section>
+
+        <section className="min-h-screen mt-28 text-center">
+          <h2 className="font-semibold text-3xl">Projects</h2>
+        </section>
+
+        <section className="min-h-screen mt-28 text-center">
+          <h2 className="font-semibold text-3xl">Contact me</h2>
+        </section>
+      </main>
 
       <footer></footer>
     </>
