@@ -13,45 +13,49 @@ export default function App() {
     setMenuIsOpen(true);
   }
 
+  const menuDisplay = menuIsOpen ? "block" : "hidden";
+
   return (
     <>
-      <header>
-        <a href="/">VladBrok</a>
+      <header className="mt-2 mx-2 flex justify-between sm:mt-4 sm:mx-4 md:mt-6 md:mx-6">
+        <a className="text-2xl" href="/">
+          VladBrok
+        </a>
 
         <button
-          className="absolute right-2 top-2 text-4xl text-black"
+          className="text-4xl text-black sm:hidden"
           onClick={handleOpenMenuClick}
         >
           <FaBars />
         </button>
 
-        {menuIsOpen && (
-          <nav className="fixed top-0 left-0 z-40 w-screen h-screen flex flex-col items-center justify-center text-center bg-white text-gray">
-            <button
-              className="absolute right-2 top-2 text-5xl text-black"
-              onClick={handleCloseMenuClick}
-            >
-              <MdClose />
-            </button>
-            <ul>
-              <li>
-                <a className="text-3xl p-4 inline-block hover:underline hover:cursor-pointer">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a className="text-3xl p-4 inline-block hover:underline hover:cursor-pointer">
-                  Projects
-                </a>
-              </li>
-              <li>
-                <a className="text-3xl p-4 inline-block hover:underline hover:cursor-pointer">
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </nav>
-        )}
+        <nav
+          className={`${menuDisplay} fixed top-0 left-0 z-40 w-screen h-screen flex flex-col items-center justify-center text-center text-3xl bg-white text-gray sm:relative sm:w-fit sm:h-fit sm:text-xl sm:block`}
+        >
+          <button
+            className="absolute right-2 top-2 text-5xl text-black sm:hidden"
+            onClick={handleCloseMenuClick}
+          >
+            <MdClose />
+          </button>
+          <ul className="sm:flex md:gap-2">
+            <li>
+              <a className="p-4 inline-block hover:underline hover:cursor-pointer sm:py-1">
+                Home
+              </a>
+            </li>
+            <li>
+              <a className="p-4 inline-block hover:underline hover:cursor-pointer sm:py-1">
+                Projects
+              </a>
+            </li>
+            <li>
+              <a className="p-4 inline-block hover:underline hover:cursor-pointer sm:py-1">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
       </header>
 
       <main></main>
