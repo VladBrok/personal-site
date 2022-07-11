@@ -10,15 +10,18 @@ export default function App() {
   }
 
   function handleMenuItemClick() {
-    console.log("active");
     setMenuIsOpen(false);
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
   }
 
   const menuDisplay = menuIsOpen ? "block" : "hidden";
 
   return (
     <>
-      <header className="fixed w-full top-0 left-0 pt-2 px-2 flex justify-between bg-white sm:pt-4 sm:px-4 md:pt-6 md:px-6">
+      <header className="fixed w-full top-0 left-0 p-2 flex justify-between bg-white shadow-md sm:p-4">
         <a className="text-2xl" href="/">
           VladBrok
         </a>
@@ -45,7 +48,7 @@ export default function App() {
                 className="p-4 inline-block hover:underline hover:cursor-pointer sm:py-1"
                 to="projects"
                 smooth={true}
-                offset={-100}
+                offset={-70}
                 onClick={handleMenuItemClick}
               >
                 Projects
@@ -56,7 +59,7 @@ export default function App() {
                 className="p-4 inline-block hover:underline hover:cursor-pointer sm:py-1"
                 to="contact"
                 smooth={true}
-                offset={-100}
+                offset={-70}
                 onClick={handleMenuItemClick}
               >
                 Contact
@@ -125,9 +128,57 @@ export default function App() {
           </Element>
         </section>
 
-        <section className="min-h-screen text-center flex items-center justify-center">
+        <section className="min-h-screen text-center flex items-center justify-center mt-28">
           <Element name="contact">
             <h2 className="font-semibold text-3xl">Contact me</h2>
+            <form className="my-4 text-left text-gray" onSubmit={handleSubmit}>
+              <div>
+                <label htmlFor="name">
+                  Name:
+                  <abbr className="text-red no-underline pl-1" title="required">
+                    *
+                  </abbr>
+                </label>
+                <input
+                  className="block rounded-md p-1 border mt-1 mb-4 border-lightgray w-full"
+                  type="text"
+                  id="name"
+                  name="name"
+                />
+              </div>
+              <div>
+                <label htmlFor="email">
+                  Email:
+                  <abbr className="text-red no-underline pl-1" title="required">
+                    *
+                  </abbr>
+                </label>
+                <input
+                  className="block rounded-md p-1 border mt-1 mb-4 border-lightgray w-full"
+                  type="email"
+                  id="email"
+                  name="email"
+                />
+              </div>
+              <div>
+                <label htmlFor="msg">
+                  Message:
+                  <abbr className="text-red no-underline pl-1" title="required">
+                    *
+                  </abbr>
+                </label>
+                <textarea
+                  className="block rounded-md p-1 border mt-1 mb-4 border-lightgray w-full"
+                  name="msg"
+                  id="msg"
+                  cols="30"
+                  rows="6"
+                ></textarea>
+              </div>
+              <div className="text-center">
+                <button>Send Message</button>
+              </div>
+            </form>
           </Element>
         </section>
       </main>
