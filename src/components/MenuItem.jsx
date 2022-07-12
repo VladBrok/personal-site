@@ -9,6 +9,7 @@ export default function MenuItem({ name, onClick, offset = -75 }) {
         smooth={true}
         offset={offset}
         onClick={onClick}
+        href="#"
       >
         {name}
       </Link>
