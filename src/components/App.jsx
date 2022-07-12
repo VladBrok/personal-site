@@ -1,23 +1,16 @@
-import { useState } from "react";
-import MobileMenuButton from "./MobileMenuButton";
-import { Link, Element } from "react-scroll";
+import { Element } from "react-scroll";
+import Menu from "./Menu";
+
+const MENU_ITEMS = [
+  { name: "home", offset: -300 },
+  { name: "projects" },
+  { name: "contact" },
+];
 
 export default function App() {
-  const [menuIsOpen, setMenuIsOpen] = useState(false);
-
-  function handleMenuButtonClick() {
-    setMenuIsOpen(value => !value);
-  }
-
-  function handleMenuItemClick() {
-    setMenuIsOpen(false);
-  }
-
   function handleSubmit(e) {
     e.preventDefault();
   }
-
-  const menuDisplay = menuIsOpen ? "block" : "hidden";
 
   return (
     <>
@@ -25,48 +18,7 @@ export default function App() {
         <a className="text-2xl" href="/">
           Vlad<span className="text-blue">Brok</span>
         </a>
-
-        {/* todo: extract menu class */}
-        <MobileMenuButton isOpen={menuIsOpen} onClick={handleMenuButtonClick} />
-        <nav
-          className={`${menuDisplay} fixed top-0 left-0 z-40 w-screen h-screen flex flex-col items-center justify-center text-center text-3xl text-gray bg-white sm:relative sm:w-fit sm:h-fit sm:text-xl sm:block`}
-        >
-          <ul className="sm:flex md:gap-2">
-            <li>
-              <Link
-                className="p-4 inline-block hover:underline hover:cursor-pointer hover:text-blue sm:py-1"
-                to="home"
-                smooth={true}
-                offset={-300}
-                onClick={handleMenuItemClick}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="p-4 inline-block hover:underline hover:cursor-pointer hover:text-blue sm:py-1"
-                to="projects"
-                smooth={true}
-                offset={-70}
-                onClick={handleMenuItemClick}
-              >
-                Projects
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="p-4 inline-block hover:underline hover:cursor-pointer hover:text-blue sm:py-1"
-                to="contact"
-                smooth={true}
-                offset={-70}
-                onClick={handleMenuItemClick}
-              >
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </nav>
+        <Menu items={MENU_ITEMS} />
       </header>
 
       <main className="mx-6 sm:mx-8 md:mx-14 lg:mx-32">
