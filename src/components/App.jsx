@@ -63,7 +63,6 @@ export default function App() {
       </main>
 
       <footer className="border-t-[2px] border-gray text-center p-6 mt-6 md:p-10">
-        {/* dup: devicon container ?*/}
         <div className="flex justify-center">
           {/* dup: devicon ? */}
           <div className="flex items-center text-lg mx-2 my-1 group relative">
