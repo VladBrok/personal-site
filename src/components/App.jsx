@@ -27,7 +27,7 @@ export default function App() {
       </header>
 
       <main className="mx-6 sm:mx-8 md:mx-14 lg:mx-32">
-        <Section className="flex items-center" name="home">
+        <Section className="flex items-center" name="about">
           <h1 className="font-semibold text-4xl my-4">
             <span className="text-gray text-xl font-normal block">
               Hi, my name is
