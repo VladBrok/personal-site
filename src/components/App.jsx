@@ -24,8 +24,8 @@ export default function App() {
 
   return (
     <>
-      <header className="z-40 text-xl fixed w-full top-0 left-0 p-2 flex justify-between items-baseline shadow-md bg-white dark:bg-darkgray dark:shadow-slate sm:p-4 md:p-5">
-        <a className="text-contrast" href="/">
+      <header className="z-40 text-xl fixed w-full top-0 left-0 p-2 flex justify-between items-center shadow-md bg-white text-contrast dark:bg-darkgray dark:shadow-slate sm:p-4 md:p-5 sm:items-baseline">
+        <a href="/">
           Vlad<span className="text-blue">Brok</span>
         </a>
         <ThemeSelect onChange={handleThemeChange} />
