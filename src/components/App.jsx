@@ -2,14 +2,44 @@ import { Element } from "react-scroll";
 import Menu from "./Menu";
 import ContactForm from "./ContactForm";
 import Project from "./Project";
+import Technology from "./Technology";
 
 const MENU_ITEMS = [
   { name: "home", offset: -300 },
   { name: "projects" },
   { name: "contact" },
 ];
+const PROJECTS = [
+  {
+    title: "This is the project",
+    description:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem molestias modi tempora voluptate reiciendis, voluptatem vero eum eos accusantium cumque.",
+    imageUrl: "/public/images/project-placeholder.jpg",
+    technologies: ["html5", "css3", "javascript", "react"],
+  },
+  {
+    title: "Another One",
+    description: "Lorem ipsum dolor sit, amet",
+    imageUrl: "/public/images/project-placeholder.jpg",
+    technologies: ["html5", "css3"],
+  },
+];
+const TECHNOLOGIES = {
+  html5: "HTML",
+  css3: "CSS",
+  react: "React",
+  javascript: "JavaScript",
+};
 
 export default function App() {
+  const projects = PROJECTS.map(data => (
+    <Project key={data.title} {...data}>
+      {data.technologies.map(techId => (
+        <Technology key={techId} id={techId} name={TECHNOLOGIES[techId]} />
+      ))}
+    </Project>
+  ));
+
   return (
     <>
       <header className="fixed w-full top-0 left-0 p-2 flex justify-between bg-white shadow-md sm:p-4 md:p-5">
@@ -44,42 +74,7 @@ export default function App() {
               Projects
             </h2>
             <div className="grid auto-rows-fr gap-10 md:grid-cols-2 xl:grid-cols-3">
-              <Project
-                title="This is the project"
-                description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem molestias modi tempora voluptate reiciendis, voluptatem vero eum eos accusantium cumque."
-                imageUrl="/public/images/project-placeholder.jpg"
-              >
-                <div className="flex items-center text-lg mx-2 my-1">
-                  <i className="devicon-html5-plain colored pr-1 pt-1"></i>
-                  <span>HTML</span>
-                </div>
-                <div className="flex items-center text-lg mx-2 my-1">
-                  <i className="devicon-css3-plain colored pr-1 pt-1"></i>
-                  <span>CSS</span>
-                </div>
-                <div className="flex items-center text-lg mx-2 my-1">
-                  <i className="devicon-javascript-plain colored pr-1 pt-1"></i>
-                  <span>JavaScript</span>
-                </div>
-                <div className="flex items-center text-lg mx-2 my-1">
-                  <i className="devicon-react-plain colored pr-1 pt-1"></i>
-                  <span>React</span>
-                </div>
-              </Project>
-              <Project
-                title="Another One"
-                description="Lorem ipsum dolor sit, amet"
-                imageUrl="/public/images/project-placeholder.jpg"
-              >
-                <div className="flex items-center text-lg mx-2 my-1">
-                  <i className="devicon-html5-plain colored pr-1 pt-1"></i>
-                  <span>HTML</span>
-                </div>
-                <div className="flex items-center text-lg mx-2 my-1">
-                  <i className="devicon-css3-plain colored pr-1 pt-1"></i>
-                  <span>CSS</span>
-                </div>
-              </Project>
+              {projects}
             </div>
           </Element>
         </section>
