@@ -1,5 +1,6 @@
 import { Element } from "react-scroll";
 import Menu from "./Menu";
+import ContactForm from "./ContactForm";
 
 const MENU_ITEMS = [
   { name: "home", offset: -300 },
@@ -8,10 +9,6 @@ const MENU_ITEMS = [
 ];
 
 export default function App() {
-  function handleSubmit(e) {
-    e.preventDefault();
-  }
-
   return (
     <>
       <header className="fixed w-full top-0 left-0 p-2 flex justify-between bg-white shadow-md sm:p-4 md:p-5">
@@ -116,59 +113,7 @@ export default function App() {
             <h2 className="font-semibold text-3xl decoration-blue underline underline-offset-2">
               Contact me
             </h2>
-            <form
-              className="my-4 text-left text-gray text-lg md:w-96"
-              onSubmit={handleSubmit}
-            >
-              <div>
-                <label htmlFor="name">
-                  Name:
-                  <abbr className="text-red no-underline pl-1" title="required">
-                    *
-                  </abbr>
-                </label>
-                <input
-                  className="block rounded-md p-1 border mt-1 mb-4 border-lightgray w-full md:mb-6"
-                  type="text"
-                  id="name"
-                  name="name"
-                />
-              </div>
-              <div>
-                <label htmlFor="email">
-                  Email:
-                  <abbr className="text-red no-underline pl-1" title="required">
-                    *
-                  </abbr>
-                </label>
-                <input
-                  className="block rounded-md p-1 border mt-1 mb-4 border-lightgray w-full md:mb-6"
-                  type="email"
-                  id="email"
-                  name="email"
-                />
-              </div>
-              <div>
-                <label htmlFor="msg">
-                  Message:
-                  <abbr className="text-red no-underline pl-1" title="required">
-                    *
-                  </abbr>
-                </label>
-                <textarea
-                  className="block rounded-md p-1 border mt-1 mb-4 border-lightgray w-full md:mb-6"
-                  name="msg"
-                  id="msg"
-                  cols="30"
-                  rows="6"
-                ></textarea>
-              </div>
-              <div>
-                <button className="block w-full px-2 py-1 text-white bg-blue rounded-md text-center my-6 hover:[filter:brightness(110%)] md:my-10">
-                  Send Message
-                </button>
-              </div>
-            </form>
+            <ContactForm />
           </Element>
         </section>
       </main>
