@@ -4,7 +4,7 @@ export default function MenuItem({ name, onClick, offset = -75 }) {
   return (
     <li>
       <Link
-        className="p-4 inline-block hover:underline hover:cursor-pointer hover:text-blue sm:py-1 capitalize"
+        className="p-4 inline-block hover:underline hover:cursor-pointer hover:text-blue capitalize sm:py-0"
         to={name}
         smooth={true}
         offset={offset}
