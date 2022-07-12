@@ -26,7 +26,7 @@ export default function Project({
           </div>
         </div>
 
-        <div className="top-1/2 [transform:rotateY(180deg)_translateY(-20%)] absolute w-full h-full [backface-visibility:hidden] px-8">
+        <div className="top-1/2 [transform:rotateY(180deg)_translateY(-20%)] absolute w-full h-full [backface-visibility:hidden] px-8 invisible group-hover:visible [transition:visibility_1s]">
           <a className="button" href={demoUrl}>
             Demo
           </a>
