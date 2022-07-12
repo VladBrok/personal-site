@@ -27,7 +27,7 @@ export default function Menu({ items }) {
     <>
       <MobileMenuButton isOpen={isOpen} onClick={handleButtonClick} />
       <nav
-        className={`${display} fixed top-0 left-0 w-screen h-screen flex flex-col items-center justify-center text-center text-3xl text-gray bg-white sm:relative sm:w-fit sm:h-fit sm:text-2xl sm:block`}
+        className={`${display} fixed top-0 left-0 w-screen h-screen flex flex-col items-center justify-center text-center text-3xl bg-white dark:bg-darkgray sm:relative sm:w-fit sm:h-fit sm:text-xl sm:block`}
       >
         <ul className="sm:flex md:gap-2">{menuItems}</ul>
       </nav>

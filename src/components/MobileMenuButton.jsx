@@ -7,7 +7,7 @@ export default function MobileMenuButton({ isOpen, ...props }) {
 
   return (
     <button
-      className={`z-50 fixed right-2 top-2 w-10 h-8 flex flex-col justify-between before:bar ${correctiveEdgeBarStyle} after:bar sm:hidden`}
+      className={`z-50 w-10 h-8 flex flex-col justify-between before:bar ${correctiveEdgeBarStyle} after:bar sm:hidden`}
       aria-label={`${label} menu`}
       {...props}
     >
