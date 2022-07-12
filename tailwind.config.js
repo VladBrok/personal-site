@@ -15,7 +15,11 @@ module.exports = {
       black: "#000",
       red: "#FF2625",
     },
-    extend: {},
+    extend: {
+      screens: {
+        xsm: '23rem'
+      },
+    },
   },
   plugins: [],
 };
