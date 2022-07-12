@@ -1,7 +1,9 @@
+import TechnologyIcon from "./TechnologyIcon";
+
 export default function Technology({ id, name }) {
   return (
-    <div className="flex items-center text-lg mx-2 my-1">
-      <i className={`devicon-${id}-plain colored pr-1 pt-1`}></i>
+    <div className="flex-centered">
+      <TechnologyIcon id={id} className="pr-1 pt-1" />
       <span>{name}</span>
     </div>
   );

@@ -6,6 +6,7 @@ import ContactForm from "./ContactForm";
 import TECHNOLOGIES from "../data/technologies.json";
 import PROJECTS from "../data/projects.json";
 import MENU_ITEMS from "../data/menuItems.json";
+import TechnologyIcon from "./TechnologyIcon";
 
 export default function App() {
   const projects = PROJECTS.map(data => (
@@ -64,10 +65,9 @@ export default function App() {
 
       <footer className="border-t-[2px] border-gray text-center p-6 mt-6 md:p-10">
         <div className="flex justify-center">
-          {/* dup: devicon ? */}
-          <div className="flex items-center text-lg mx-2 my-1 group relative">
+          <div className="flex-centered group relative">
             <a href="https://github.com/VladBrok/">
-              <i className="devicon-github-plain colored text-3xl"></i>
+              <TechnologyIcon id="github" className="text-3xl" />
             </a>
             <span className="absolute left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 group-hover:mb-14 [transition:opacity_0.6s,margin_0.6s] pointer-events-none">
               Github

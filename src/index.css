@@ -10,3 +10,9 @@
     @apply min-h-screen;
   }
 }
+
+@layer utilities {
+  .flex-centered {
+    @apply flex items-center text-lg mx-2 my-1;
+  }
+}
