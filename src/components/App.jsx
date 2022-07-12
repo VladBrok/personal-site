@@ -1,8 +1,8 @@
-import { Element } from "react-scroll";
 import Menu from "./Menu";
-import ContactForm from "./ContactForm";
 import Project from "./Project";
 import Technology from "./Technology";
+import Section from "./Section";
+import ContactForm from "./ContactForm";
 import TECHNOLOGIES from "../data/technologies.json";
 import PROJECTS from "../data/projects.json";
 import MENU_ITEMS from "../data/menuItems.json";
@@ -26,43 +26,40 @@ export default function App() {
       </header>
 
       <main className="mx-6 sm:mx-8 md:mx-14 lg:mx-32">
-        <section className="min-h-screen flex items-center">
-          <Element name="home">
-            <h1 className="font-semibold text-4xl my-4">
-              <span className="text-gray text-xl font-normal block">
-                Hi, my name is
-              </span>{" "}
-              <span className="block decoration-blue underline underline-offset-2 md:mb-6 md:mt-2">
-                Vladislav Brakalo
-              </span>
-            </h1>
-            <p className="text-gray text-xl -mt-1">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-              praesentium, reprehenderit quos a voluptatibus voluptatum ipsa
-              quia nemo inventore eum.
-            </p>
-          </Element>
-        </section>
+        <Section className="flex items-center" name="home">
+          <h1 className="font-semibold text-4xl my-4">
+            <span className="text-gray text-xl font-normal block">
+              Hi, my name is
+            </span>{" "}
+            <span className="block decoration-blue underline underline-offset-2 md:mb-6 md:mt-2">
+              Vladislav Brakalo
+            </span>
+          </h1>
+          <p className="text-gray text-xl -mt-1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+            praesentium, reprehenderit quos a voluptatibus voluptatum ipsa quia
+            nemo inventore eum.
+          </p>
+        </Section>
 
-        <section className="min-h-screen text-center">
-          <Element name="projects">
-            <h2 className="font-semibold text-3xl my-8 decoration-blue underline underline-offset-2">
-              Projects
-            </h2>
-            <div className="grid auto-rows-fr gap-10 md:grid-cols-2 xl:grid-cols-3">
-              {projects}
-            </div>
-          </Element>
-        </section>
+        <Section className="text-center" name="projects">
+          <h2 className="font-semibold text-3xl my-8 decoration-blue underline underline-offset-2">
+            Projects
+          </h2>
+          <div className="grid auto-rows-fr gap-10 md:grid-cols-2 xl:grid-cols-3">
+            {projects}
+          </div>
+        </Section>
 
-        <section className="min-h-screen text-center flex items-center justify-center mt-28">
-          <Element name="contact">
-            <h2 className="font-semibold text-3xl decoration-blue underline underline-offset-2">
-              Contact me
-            </h2>
-            <ContactForm />
-          </Element>
-        </section>
+        <Section
+          className="text-center flex items-center justify-center mt-28"
+          name="contact"
+        >
+          <h2 className="font-semibold text-3xl decoration-blue underline underline-offset-2">
+            Contact me
+          </h2>
+          <ContactForm />
+        </Section>
       </main>
 
       <footer className="border-t-[2px] border-gray text-center p-6 mt-6 md:p-10">

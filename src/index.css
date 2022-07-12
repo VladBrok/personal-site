@@ -6,4 +6,7 @@
   .bar {
     @apply bg-black w-full h-[0.35rem] rounded [transition:all_0.5s_ease-in-out];
   }
+  .section {
+    @apply min-h-screen;
+  }
 }
