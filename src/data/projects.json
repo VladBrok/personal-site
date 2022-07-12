@@ -1,0 +1,18 @@
+[
+  {
+    "title": "This is the project",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem molestias modi tempora voluptate reiciendis, voluptatem vero eum eos accusantium cumque.",
+    "imageUrl": "/public/images/project-placeholder.jpg",
+    "demoUrl": "https://google.com",
+    "codeUrl": "https://stackoverflow.com",
+    "technologies": ["html5", "css3", "javascript", "react"]
+  },
+  {
+    "title": "Another One",
+    "description": "Lorem ipsum dolor sit, amet",
+    "imageUrl": "/public/images/project-placeholder.jpg",
+    "demoUrl": "https://yandex.ru",
+    "codeUrl": "https://stackoverflow.com",
+    "technologies": ["html5", "css3"]
+  }
+]
