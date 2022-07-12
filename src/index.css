@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply dark:bg-darkgray text-gray dark:text-slate;
+    @apply bg-white dark:bg-darkgray text-gray dark:text-slate;
   }
 }
 

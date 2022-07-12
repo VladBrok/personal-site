@@ -8,10 +8,15 @@ import ThemeSelect from "./ThemeSelect";
 import TECHNOLOGIES from "../data/technologies.json";
 import PROJECTS from "../data/projects.json";
 import MENU_ITEMS from "../data/menuItems.json";
+import { changeTheme, getCurrentTheme } from "../lib/theme";
+import { useState } from "react";
 
 export default function App() {
+  const [theme, setTheme] = useState(() => getCurrentTheme());
+
   function handleThemeChange(newTheme) {
-    document.documentElement.className = newTheme;
+    changeTheme(newTheme);
+    setTheme(newTheme);
   }
 
   const projects = PROJECTS.map(data => (
@@ -28,7 +33,7 @@ export default function App() {
         <a href="/">
           Vlad<span className="text-blue">Brok</span>
         </a>
-        <ThemeSelect onChange={handleThemeChange} />
+        <ThemeSelect onChange={handleThemeChange} value={theme} />
         <Menu items={MENU_ITEMS} />
       </header>
 

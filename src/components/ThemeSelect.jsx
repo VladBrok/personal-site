@@ -1,6 +1,6 @@
 import { BsMoon, BsSun } from "react-icons/bs";
 
-export default function ThemeSelect({ onChange }) {
+export default function ThemeSelect({ onChange, value }) {
   function handleChange(e) {
     onChange(e.target.value);
   }
@@ -15,6 +15,7 @@ export default function ThemeSelect({ onChange }) {
         name="themes"
         id="themes"
         onChange={handleChange}
+        value={value ?? "system"}
       >
         <option value="system">System</option>
         <option value="dark">Dark</option>
