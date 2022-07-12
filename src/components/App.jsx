@@ -3,33 +3,9 @@ import Menu from "./Menu";
 import ContactForm from "./ContactForm";
 import Project from "./Project";
 import Technology from "./Technology";
-
-const MENU_ITEMS = [
-  { name: "home", offset: -300 },
-  { name: "projects" },
-  { name: "contact" },
-];
-const PROJECTS = [
-  {
-    title: "This is the project",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem molestias modi tempora voluptate reiciendis, voluptatem vero eum eos accusantium cumque.",
-    imageUrl: "/public/images/project-placeholder.jpg",
-    technologies: ["html5", "css3", "javascript", "react"],
-  },
-  {
-    title: "Another One",
-    description: "Lorem ipsum dolor sit, amet",
-    imageUrl: "/public/images/project-placeholder.jpg",
-    technologies: ["html5", "css3"],
-  },
-];
-const TECHNOLOGIES = {
-  html5: "HTML",
-  css3: "CSS",
-  react: "React",
-  javascript: "JavaScript",
-};
+import TECHNOLOGIES from "../data/technologies.json";
+import PROJECTS from "../data/projects.json";
+import MENU_ITEMS from "../data/menuItems.json";
 
 export default function App() {
   const projects = PROJECTS.map(data => (
