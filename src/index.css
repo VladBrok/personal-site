@@ -9,10 +9,16 @@
   .section {
     @apply min-h-screen;
   }
+  .button {
+    @apply block w-full px-3 py-2 text-white bg-blue rounded-md text-center my-6 hover:[filter:brightness(110%)] md:my-10 md:py-3 md:px-4 text-lg;
+  }
 }
 
 @layer utilities {
   .flex-centered {
     @apply flex items-center text-lg mx-2 my-1;
+  }
+  .shadow-around {
+    box-shadow: 0 10px 15px 3px rgb(0 0 0 / 0.1), 0 4px 6px 4px rgb(0 0 0 / 0.1);
   }
 }

@@ -26,9 +26,7 @@ export default function ContactForm() {
         input={props => <textarea cols="30" rows="6" {...props}></textarea>}
       />
       <div>
-        <button className="block w-full px-3 py-2 text-white bg-blue rounded-md text-center my-6 hover:[filter:brightness(110%)] md:my-10 md:py-3 md:px-4">
-          Send Message
-        </button>
+        <button className="button">Send Message</button>
       </div>
     </form>
   );

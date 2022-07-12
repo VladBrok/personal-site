@@ -19,7 +19,7 @@ export default function App() {
 
   return (
     <>
-      <header className="fixed w-full top-0 left-0 p-2 flex justify-between bg-white shadow-md sm:p-4 md:p-5">
+      <header className="z-40 fixed w-full top-0 left-0 p-2 flex justify-between bg-white shadow-md sm:p-4 md:p-5">
         <a className="text-2xl" href="/">
           Vlad<span className="text-blue">Brok</span>
         </a>
