@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-white dark:bg-darkgray text-gray dark:text-slate;
+    @apply bg-white dark:bg-darkgray text-gray dark:text-slate text-min-base;
   }
 }
 
@@ -18,13 +18,13 @@
   }
 
   .button {
-    @apply block w-full px-3 py-2 text-white dark:text-darkgray bg-blue rounded-md text-center my-6 hover:[filter:brightness(115%)] hover:shadow-sm hover:shadow-blue md:my-10 md:py-3 md:px-4 text-lg;
+    @apply block w-full px-3 py-2 text-white dark:text-darkgray bg-blue rounded-md text-center my-6 hover:[filter:brightness(115%)] hover:shadow-sm hover:shadow-blue md:my-10 md:py-3 md:px-4;
   }
 }
 
 @layer utilities {
   .flex-centered {
-    @apply flex items-center text-lg mx-2 my-1;
+    @apply flex items-center mx-2 my-1;
   }
 
   .shadow-around {
@@ -34,5 +34,21 @@
 
   .text-contrast {
     @apply text-black dark:text-light;
+  }
+
+  .text-min-base {
+    @apply text-base sm:text-lg lg:text-xl;
+  }
+
+  .text-min-lg {
+    @apply text-lg sm:text-xl lg:text-2xl;
+  }
+
+  .text-min-xl {
+    @apply text-xl sm:text-2xl lg:text-3xl;
+  }
+
+  .text-min-2xl {
+    @apply text-2xl sm:text-3xl lg:text-4xl;
   }
 }

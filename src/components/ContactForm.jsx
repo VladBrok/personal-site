@@ -6,7 +6,7 @@ export default function ContactForm() {
   }
 
   return (
-    <form className="my-4 text-left text-lg md:w-96" onSubmit={handleSubmit}>
+    <form className="my-4 text-left md:w-96" onSubmit={handleSubmit}>
       <InputContainer
         id="name"
         label="Name:"

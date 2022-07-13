@@ -16,10 +16,10 @@ export default function Project({
             alt=""
           />
           <div className="px-4 flex flex-col w-full h-full">
-            <h3 className="font-semibold text-2xl mb-6 mt-6 text-contrast">
+            <h3 className="font-semibold text-min-lg mb-6 mt-6 text-contrast">
               {title}
             </h3>
-            <p className="text-lg mb-6">{description}</p>
+            <p className="mb-6">{description}</p>
             <div className="flex flex-wrap justify-center mb-6 mt-auto text-contrast">
               {children}
             </div>

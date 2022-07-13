@@ -29,7 +29,7 @@ export default function App() {
 
   return (
     <>
-      <header className="z-40 text-xl fixed w-full top-0 left-0 p-2 flex justify-between items-center shadow-md bg-white text-contrast dark:bg-darkgray dark:shadow-slate sm:p-4 md:p-5 sm:items-baseline">
+      <header className="z-40 text-min-lg fixed w-full top-0 left-0 p-2 flex justify-between items-center shadow-md bg-white text-contrast dark:bg-darkgray dark:shadow-slate sm:p-4 md:p-5 sm:items-baseline">
         <a href="/">
           Vlad<span className="text-blue">Brok</span>
         </a>
@@ -39,13 +39,13 @@ export default function App() {
 
       <main className="mx-6 sm:mx-8 md:mx-14 lg:mx-32">
         <Section className="flex items-center" name="about">
-          <h1 className="font-semibold text-4xl my-4">
-            <span className="text-xl font-normal block">Hi, my name is</span>{" "}
-            <span className="block decoration-blue underline underline-offset-2 text-contrast md:mb-6 md:mt-2">
+          <h1 className="font-semibold my-4">
+            <span className="font-normal block">Hi, my name is</span>{" "}
+            <span className="text-min-2xl block decoration-blue underline underline-offset-2 text-contrast md:mb-6 md:mt-2">
               Vladislav Brakalo
             </span>
           </h1>
-          <p className="text-xl -mt-1">
+          <p className="-mt-1">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
             praesentium, reprehenderit quos a voluptatibus voluptatum ipsa quia
             nemo inventore eum.
@@ -53,7 +53,7 @@ export default function App() {
         </Section>
 
         <Section className="text-center" name="projects">
-          <h2 className="font-semibold text-3xl my-8 decoration-blue underline underline-offset-2 text-contrast">
+          <h2 className="font-semibold text-min-xl my-8 decoration-blue underline underline-offset-2 text-contrast">
             Projects
           </h2>
           <div className="grid auto-rows-fr gap-10 md:grid-cols-2 xl:grid-cols-3">
@@ -65,7 +65,7 @@ export default function App() {
           className="text-center flex items-center justify-center mt-28"
           name="contact"
         >
-          <h2 className="font-semibold text-3xl decoration-blue underline underline-offset-2 text-contrast">
+          <h2 className="font-semibold text-min-xl decoration-blue underline underline-offset-2 text-contrast">
             Contact me
           </h2>
           <ContactForm />
@@ -87,7 +87,7 @@ export default function App() {
             </span>
           </div>
         </div>
-        <p className="text-lg mt-4">Copyright (c) 2022 Vladislav Brakalo</p>
+        <p className="mt-4">Copyright (c) 2022 Vladislav Brakalo</p>
       </footer>
     </>
   );
