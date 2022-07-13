@@ -20,6 +20,10 @@
   .button {
     @apply block w-full px-3 py-2 text-white dark:text-darkgray bg-blue rounded-md text-center my-6 hover:[filter:brightness(115%)] hover:shadow-sm hover:shadow-blue md:my-10 md:py-3 md:px-4;
   }
+
+  .input {
+    @apply block rounded-md p-1 border-2 mt-1 border-lightgray w-full md:mb-6 md:py-2 md:px-3 dark:bg-lightslate dark:border-opacity-0 text-contrast invalid:border-red dark:invalid:border-red;
+  }
 }
 
 @layer utilities {

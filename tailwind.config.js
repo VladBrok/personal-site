@@ -13,11 +13,11 @@ module.exports = {
       lightslate: "#1F1D31",
       light: "#E2E8F0",
       black: "#000",
-      red: "#FF2625",
+      red: "#DC3545",
     },
     extend: {
       screens: {
-        xsm: '23rem'
+        xsm: "23rem",
       },
     },
   },

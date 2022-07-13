@@ -8,7 +8,6 @@ export default function ContactForm() {
     const form = e.target;
     const formData = new FormData(form);
     await sendEmail(formData);
-    form.reset();
   }
 
   return (
@@ -16,17 +15,23 @@ export default function ContactForm() {
       <InputContainer
         id="name"
         label="Name:"
-        input={props => <input type="text" {...props} />}
+        required={true}
+        errorMessage="Please enter your name"
+        input={props => <input type="text" maxLength={25} {...props} />}
       />
       <InputContainer
         id="email"
         label="Email:"
+        required={true}
+        errorMessage="Please enter a valid email address"
         input={props => <input type="email" {...props} />}
       />
       <InputContainer
         id="msg"
         label="Message:"
-        input={props => <textarea cols="30" rows="6" {...props}></textarea>}
+        input={props => (
+          <textarea cols="30" rows="6" maxLength={100} {...props}></textarea>
+        )}
       />
       <div>
         <button className="button">Send Message</button>
