@@ -1,15 +1,27 @@
 import Label from "./Label";
 
-export default function InputContainer({ id, label, input }) {
+export default function InputContainer({
+  id,
+  label,
+  input,
+  required,
+  className = "",
+  errorMessage = "",
+}) {
   return (
     <div>
-      <Label htmlFor={id}>{label}</Label>
+      <Label htmlFor={id} required={required}>
+        {label}
+      </Label>
       {input({
-        className:
-          "block rounded-md p-1 border mt-1 mb-4 border-lightgray w-full md:mb-6 md:py-2 md:px-3 dark:bg-lightslate dark:border-none text-contrast",
+        className: `input peer ${className}`,
         id,
         name: id,
+        required,
       })}
+      <p className="invisible peer-invalid:visible text-red mb-4 md:mb-6">
+        {errorMessage}
+      </p>
     </div>
   );
 }

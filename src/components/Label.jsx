@@ -1,10 +1,16 @@
-export default function Label({ htmlFor, children }) {
+export default function Label({ htmlFor, required, children }) {
   return (
     <label htmlFor={htmlFor}>
       {children}
-      <abbr className="text-red no-underline pl-1" title="required">
-        *
-      </abbr>
+      {required && (
+        <abbr
+          className="text-red no-underline pl-1"
+          title="required"
+          aria-label="required"
+        >
+          *
+        </abbr>
+      )}
     </label>
   );
 }
