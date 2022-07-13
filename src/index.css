@@ -6,6 +6,14 @@
   body {
     @apply bg-white dark:bg-darkgray text-gray dark:text-slate text-min-base;
   }
+
+  a,
+  button,
+  select,
+  input,
+  textarea {
+    @apply outline-1 outline-black dark:outline-light;
+  }
 }
 
 @layer components {
