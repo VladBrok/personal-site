@@ -2,19 +2,12 @@ import MenuItem from "./MenuItem";
 import { useEffect, useState } from "react";
 import MobileMenuButton from "./MobileMenuButton";
 import FocusTrap from "focus-trap-react";
+import { listenBreakpointChange } from "../lib/breakpointListener";
 
 export default function Menu({ items }) {
   const [isOpen, setIsOpen] = useState(false);
-  useEffect(() => {
-    const breakpoint = window.matchMedia("(min-width: 640px)");
-    function adjustOpenState() {
-      if (breakpoint.matches) {
-        setIsOpen(false);
-      }
-    }
-    breakpoint.addEventListener("change", adjustOpenState);
-    return () => breakpoint.removeEventListener("change", adjustOpenState);
-  }, []);
+
+  useEffect(() => listenBreakpointChange("640px", close), []);
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
   }, [isOpen]);
@@ -23,7 +16,7 @@ export default function Menu({ items }) {
     setIsOpen(value => !value);
   }
 
-  function handleItemClick() {
+  function close() {
     setIsOpen(false);
   }
 
@@ -33,7 +26,7 @@ export default function Menu({ items }) {
       key={item.name}
       name={item.name}
       offset={item.offset}
-      onClick={handleItemClick}
+      onClick={close}
     />
   ));
 
