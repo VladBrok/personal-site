@@ -10,7 +10,11 @@ export default function Project({
     <div className="max-w-[20rem] xsm:w-[20rem] m-auto h-full [perspective:1000px] group">
       <div className="flex flex-col items-center w-full h-full [transition:transform_1s] [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] shadow-around shadow-lightgray dark:shadow-gray rounded-2xl">
         <div className="flex flex-col items-center w-full h-full [backface-visibility:hidden]">
-          <img className="w-full block rounded-t-2xl" src={imageUrl} alt="" />
+          <img
+            className="w-full h-[13rem] block rounded-t-2xl object-cover"
+            src={imageUrl}
+            alt=""
+          />
           <div className="px-4 flex flex-col w-full h-full">
             <h3 className="font-semibold text-min-lg my-4 text-contrast sm:my-6">
               {title}
