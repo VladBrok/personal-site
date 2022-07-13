@@ -37,18 +37,18 @@
   }
 
   .text-min-base {
-    @apply text-base sm:text-lg lg:text-xl;
+    @apply text-base lg:text-lg;
   }
 
   .text-min-lg {
-    @apply text-lg sm:text-xl lg:text-2xl;
+    @apply text-lg lg:text-xl;
   }
 
   .text-min-xl {
-    @apply text-xl sm:text-2xl lg:text-3xl;
+    @apply text-xl lg:text-2xl;
   }
 
   .text-min-2xl {
-    @apply text-2xl sm:text-3xl lg:text-4xl;
+    @apply text-2xl lg:text-3xl;
   }
 }
