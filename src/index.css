@@ -32,6 +32,10 @@
       0 4px 6px 4px var(--tw-shadow-color);
   }
 
+  .rotate-y-180 {
+    @apply [transform:rotateY(180deg)];
+  }
+
   .text-contrast {
     @apply text-black dark:text-light;
   }

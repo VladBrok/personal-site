@@ -13,6 +13,9 @@ export default function ThemeSelect({ onChange, value }) {
       <BsMoon className={`${iconStyles} hidden dark:block`} />
       <BsSun className={`${iconStyles} dark:hidden`} />
 
+      <label className="sr-only" htmlFor="themes">
+        Select color theme
+      </label>
       <select
         className="w-9 h-9 sm:h-8 sm:w-8 cursor-pointer dark:bg-darkgray"
         name="themes"
