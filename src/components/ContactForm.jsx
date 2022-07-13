@@ -34,7 +34,7 @@ export default function ContactForm() {
         )}
       />
       <div>
-        <button className="button">Send Message</button>
+        <button className="button mt-8">Send Message</button>
       </div>
     </form>
   );

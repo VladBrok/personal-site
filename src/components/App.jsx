@@ -82,7 +82,7 @@ export default function App() {
                 isColored={false}
               />
             </a>
-            <span className="absolute left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 group-hover:mb-14 [transition:opacity_0.6s,margin_0.6s] pointer-events-none">
+            <span className="absolute left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 group-hover:mb-16 [transition:opacity_0.6s,margin_0.6s] pointer-events-none">
               Github
             </span>
           </div>
