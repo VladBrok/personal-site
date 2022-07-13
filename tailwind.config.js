@@ -22,11 +22,6 @@ module.exports = {
         "cannot-hover": { raw: "(hover: none)" },
       },
     },
-    extend: {
-      screens: {
-        xsm: "24rem",
-      },
-    },
   },
   plugins: [],
 };
