@@ -1,8 +1,14 @@
+import { sendEmail } from "../lib/email";
 import InputContainer from "./InputContainer";
 
 export default function ContactForm() {
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
+
+    const form = e.target;
+    const formData = new FormData(form);
+    await sendEmail(formData);
+    form.reset();
   }
 
   return (
