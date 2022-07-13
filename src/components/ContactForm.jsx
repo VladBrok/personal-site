@@ -1,14 +1,40 @@
+import { useState } from "react";
 import { sendEmail } from "../lib/email";
 import InputContainer from "./InputContainer";
+import Notification from "./Notification";
 
 export default function ContactForm() {
+  const [showNotification, setShowNotification] = useState(false);
+  const [isError, setIsError] = useState(false);
+
   async function handleSubmit(e) {
     e.preventDefault();
 
-    const form = e.target;
-    const formData = new FormData(form);
-    await sendEmail(formData);
+    try {
+      const form = e.target;
+      const formData = new FormData(form);
+      const response = await sendEmail(formData);
+
+      console.log(response);
+      if (!response.ok) {
+        throw new Error();
+      }
+
+      setIsError(false);
+    } catch {
+      setIsError(true);
+    } finally {
+      setShowNotification(true);
+    }
   }
+
+  function handleNotificationClose() {
+    setShowNotification(false);
+  }
+
+  const notification = isError
+    ? "Failed to send message. Please try again later"
+    : "Message sent!";
 
   return (
     <form className="my-4 text-left md:w-96" onSubmit={handleSubmit}>
@@ -35,6 +61,13 @@ export default function ContactForm() {
       />
       <div>
         <button className="button mt-8">Send Message</button>
+        <Notification
+          isActive={showNotification}
+          isError={isError}
+          onClose={handleNotificationClose}
+        >
+          {notification}
+        </Notification>
       </div>
     </form>
   );

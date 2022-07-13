@@ -8,7 +8,7 @@ export default function Project({
 }) {
   return (
     <div className="max-w-[20rem] xsm:w-[20rem] m-auto h-full [perspective:1000px] group">
-      <div className="flex flex-col items-center w-full h-full [transition:transform_1s] [transform-style:preserve-3d] group-hover:rotate-y-180 focus-within:rotate-y-180 shadow-around shadow-lightgray dark:shadow-gray rounded-2xl">
+      <div className="flex flex-col items-center w-full h-full [transition:transform_1s] [transform-style:preserve-3d] can-hover:group-hover:rotate-y-180 cannot-hover:group-active:rotate-y-180  focus-within:rotate-y-180 shadow-around shadow-lightgray dark:shadow-gray rounded-2xl">
         <div className="flex flex-col items-center w-full h-full [backface-visibility:hidden]">
           <img
             className="w-full h-[13rem] block rounded-t-2xl object-cover"
@@ -26,7 +26,7 @@ export default function Project({
           </div>
         </div>
 
-        <div className="top-1/2 [transform:rotateY(180deg)_translateY(-20%)] absolute w-full h-full [backface-visibility:hidden] px-8">
+        <div className="top-1/2 absolute [transform:rotateY(180deg)_translateY(-20%)] w-full h-full [backface-visibility:hidden] px-8">
           <a className="button" href={demoUrl}>
             <span className="sr-only">{title} </span>Demo
           </a>

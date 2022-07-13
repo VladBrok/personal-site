@@ -18,6 +18,8 @@ module.exports = {
     extend: {
       screens: {
         xsm: "23rem",
+        "can-hover": { raw: "(hover: hover)" },
+        "cannot-hover": { raw: "(hover: none)" },
       },
     },
   },
