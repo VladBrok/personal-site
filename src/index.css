@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-white dark:bg-darkgray text-gray dark:text-slate text-min-base;
+    @apply bg-contrast text-gray dark:text-slate text-min-base;
   }
 
   a,
@@ -25,8 +25,12 @@
     @apply min-h-screen;
   }
 
+  .button-like {
+    @apply hover:[filter:brightness(115%)] active:scale-95 disabled:active:scale-100 hover:cursor-pointer disabled:opacity-60 disabled:filter-none disabled:cursor-default;
+  }
+
   .button {
-    @apply block w-full px-3 py-2 text-white dark:text-darkgray bg-blue rounded-md text-center my-6 hover:[filter:brightness(115%)] hover:shadow-sm hover:shadow-blue md:my-10 md:py-3 md:px-4;
+    @apply button-like block w-full px-3 py-2 text-white dark:text-darkgray bg-blue hover:shadow-sm disabled:shadow-none hover:shadow-blue rounded-md text-center my-6 md:my-10 md:py-3 md:px-4;
   }
 
   .input {
@@ -52,6 +56,10 @@
     @apply text-black dark:text-light;
   }
 
+  .bg-contrast {
+    @apply bg-white dark:bg-darkgray;
+  }
+
   .text-min-base {
     @apply text-base lg:text-lg;
   }
@@ -66,5 +74,13 @@
 
   .text-min-2xl {
     @apply text-2xl lg:text-3xl;
+  }
+
+  .header {
+    @apply decoration-blue underline underline-offset-2 text-contrast;
+  }
+
+  .select-icon {
+    @apply absolute -translate-x-1/2 top-[55%] -translate-y-1/2 left-1/2 pointer-events-none text-3xl sm:text-2xl bg-contrast;
   }
 }

@@ -41,7 +41,7 @@ export default function App() {
         <Section className="flex items-center" name="about">
           <h1 className="font-semibold my-4">
             <span className="font-normal block">Hi, my name is</span>{" "}
-            <span className="text-min-2xl block decoration-blue underline underline-offset-2 text-contrast md:mb-6 md:mt-2">
+            <span className="text-min-2xl block header md:mb-6 md:mt-2">
               Vladislav Brakalo
             </span>
           </h1>
@@ -53,9 +53,7 @@ export default function App() {
         </Section>
 
         <Section className="text-center" name="projects">
-          <h2 className="font-semibold text-min-xl my-8 decoration-blue underline underline-offset-2 text-contrast">
-            Projects
-          </h2>
+          <h2 className="font-semibold text-min-xl my-8 header">Projects</h2>
           <div className="grid auto-rows-fr gap-10 md:grid-cols-2 xl:grid-cols-3">
             {projects}
           </div>
@@ -65,9 +63,7 @@ export default function App() {
           className="text-center flex items-center justify-center mt-28"
           name="contact"
         >
-          <h2 className="font-semibold text-min-xl decoration-blue underline underline-offset-2 text-contrast">
-            Contact me
-          </h2>
+          <h2 className="font-semibold text-min-xl header">Contact me</h2>
           <ContactForm />
         </Section>
       </main>
