@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, lazy, Suspense } from "react";
 import { sendEmail } from "../lib/email";
 import InputContainer from "./InputContainer";
-import Notification from "./Notification";
+
+const Notification = lazy(() => import("./Notification"));
 
 export default function ContactForm() {
   const [showNotification, setShowNotification] = useState(false);
@@ -66,13 +67,17 @@ export default function ContactForm() {
         <button className="button mt-8" disabled={isLoading}>
           Send Message
         </button>
-        <Notification
-          isActive={showNotification}
-          isError={isError}
-          onClose={handleNotificationClose}
-        >
-          {notification}
-        </Notification>
+        <Suspense fallback={null}>
+          {showNotification && (
+            <Notification
+              isActive={showNotification}
+              isError={isError}
+              onClose={handleNotificationClose}
+            >
+              {notification}
+            </Notification>
+          )}
+        </Suspense>
       </div>
     </form>
   );

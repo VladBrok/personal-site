@@ -5,7 +5,6 @@ export default function Notification({ isActive, isError, onClose, children }) {
   const visibility = isActive
     ? "visible -translate-y-14"
     : "invisible translate-y-full";
-  console.log("notifi", isActive);
 
   return (
     <div
