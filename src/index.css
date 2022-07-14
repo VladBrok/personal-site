@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-white dark:bg-darkgray text-gray dark:text-slate text-min-base;
+    @apply bg-contrast text-gray dark:text-slate text-min-base;
   }
 
   a,
@@ -50,6 +50,10 @@
 
   .text-contrast {
     @apply text-black dark:text-light;
+  }
+
+  .bg-contrast {
+    @apply bg-white dark:bg-darkgray;
   }
 
   .text-min-base {

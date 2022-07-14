@@ -1,7 +1,7 @@
 import { BsMoon, BsSun } from "react-icons/bs";
 
 const iconStyles =
-  "absolute top-[55%] -translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none text-3xl sm:text-2xl bg-white dark:bg-darkgray";
+  "absolute top-[55%] -translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none text-3xl sm:text-2xl bg-contrast";
 
 export default function ThemeSelect({ onChange, value }) {
   function handleChange(e) {
@@ -17,7 +17,7 @@ export default function ThemeSelect({ onChange, value }) {
         Select color theme
       </label>
       <select
-        className="w-9 h-9 sm:h-8 sm:w-8 cursor-pointer dark:bg-darkgray"
+        className="w-9 h-9 sm:h-8 sm:w-8 cursor-pointer bg-contrast"
         name="themes"
         id="themes"
         onChange={handleChange}
