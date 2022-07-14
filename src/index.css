@@ -26,7 +26,7 @@
   }
 
   .button-like {
-    @apply hover:[filter:brightness(115%)] active:scale-95 hover:cursor-pointer disabled:opacity-60 disabled:filter-none disabled:cursor-default;
+    @apply hover:[filter:brightness(115%)] active:scale-95 disabled:active:scale-100 hover:cursor-pointer disabled:opacity-60 disabled:filter-none disabled:cursor-default;
   }
 
   .button {
