@@ -8,20 +8,15 @@ export default function Menu({ items }) {
   const [isOpen, setIsOpen] = useState(false);
   const [pageScroll, setPageScroll] = useState(0);
 
-  useEffect(
-    () => listenBreakpointChange("640px", handleMenuItemClick),
-    [isOpen]
-  );
+  useEffect(() => listenBreakpointChange("640px", close), [isOpen]);
 
   function handleButtonClick() {
     const newIsOpen = !isOpen;
-
     if (!newIsOpen) {
       allowPageScrolling();
     } else {
       preventPageScrolling();
     }
-
     setIsOpen(newIsOpen);
   }
 
@@ -40,7 +35,7 @@ export default function Menu({ items }) {
     setPageScroll(currentScroll);
   }
 
-  function handleMenuItemClick() {
+  function close() {
     if (!isOpen) {
       return;
     }
@@ -54,7 +49,7 @@ export default function Menu({ items }) {
       key={item.name}
       name={item.name}
       offset={item.offset}
-      onClick={handleMenuItemClick}
+      onClick={close}
     />
   ));
 
