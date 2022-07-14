@@ -69,11 +69,7 @@ export default function ContactForm() {
         </button>
         <Suspense fallback={null}>
           {showNotification && (
-            <Notification
-              isActive={showNotification}
-              isError={isError}
-              onClose={handleNotificationClose}
-            >
+            <Notification isError={isError} onClose={handleNotificationClose}>
               {notification}
             </Notification>
           )}
