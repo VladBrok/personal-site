@@ -26,7 +26,7 @@
   }
 
   .button {
-    @apply block w-full px-3 py-2 text-white dark:text-darkgray bg-blue rounded-md text-center my-6 hover:[filter:brightness(115%)] hover:shadow-sm hover:shadow-blue md:my-10 md:py-3 md:px-4;
+    @apply block w-full px-3 py-2 text-white dark:text-darkgray bg-blue rounded-md text-center my-6 hover:[filter:brightness(115%)] hover:shadow-sm hover:shadow-blue disabled:opacity-60 disabled:filter-none disabled:shadow-none disabled:cursor-default md:my-10 md:py-3 md:px-4;
   }
 
   .input {

@@ -6,6 +6,7 @@ import Notification from "./Notification";
 export default function ContactForm() {
   const [showNotification, setShowNotification] = useState(false);
   const [isError, setIsError] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -13,6 +14,7 @@ export default function ContactForm() {
     try {
       const form = e.target;
       const formData = new FormData(form);
+      setIsLoading(true);
       const response = await sendEmail(formData);
 
       console.log(response);
@@ -25,6 +27,7 @@ export default function ContactForm() {
       setIsError(true);
     } finally {
       setShowNotification(true);
+      setIsLoading(false);
     }
   }
 
@@ -60,7 +63,9 @@ export default function ContactForm() {
         )}
       />
       <div>
-        <button className="button mt-8">Send Message</button>
+        <button className="button mt-8" disabled={isLoading}>
+          Send Message
+        </button>
         <Notification
           isActive={showNotification}
           isError={isError}
