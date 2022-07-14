@@ -14,7 +14,7 @@ export default function ThemeSelect({ onChange, value }) {
         Select color theme
       </label>
       <select
-        className="w-9 h-9 sm:h-8 sm:w-8 cursor-pointer bg-contrast"
+        className="w-9 h-9 sm:h-8 sm:w-8 cursor-pointer bg-contrast appearance-none"
         name="themes"
         id="themes"
         onChange={handleChange}
