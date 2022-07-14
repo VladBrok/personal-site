@@ -9,15 +9,18 @@ export default function Project({
   description,
   children,
 }) {
-  const [rotation, setRotation] = useState("");
+  const [isRotated, setIsRotated] = useState(false);
 
   function handleFrontArrowClick() {
-    setRotation("rotate-y-180");
+    setIsRotated(true);
   }
 
   function handleBackArrowClick() {
-    setRotation("");
+    setIsRotated(false);
   }
+
+  const rotation = isRotated ? "rotate-y-180" : "";
+  const backVisibility = isRotated ? "visible" : "invisible";
 
   return (
     <div className="max-w-[20rem] xsm:w-[20rem] m-auto h-full [perspective:1000px]">
@@ -42,7 +45,9 @@ export default function Project({
           <Arrow onClick={handleFrontArrowClick} />
         </div>
 
-        <div className="flex flex-col absolute top-0 rotate-y-180 w-full h-full [backface-visibility:hidden]">
+        <div
+          className={`${backVisibility} flex flex-col absolute top-0 rotate-y-180 w-full h-full [backface-visibility:hidden] [transition:visibility_0.5s]`}
+        >
           <div className="mt-auto px-8">
             <a className="button" href={demoUrl}>
               <span className="sr-only">{title} </span>Demo
