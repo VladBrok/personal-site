@@ -6,17 +6,45 @@ import { listenBreakpointChange } from "../lib/breakpointListener";
 
 export default function Menu({ items }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [pageScroll, setPageScroll] = useState(0);
 
-  useEffect(() => listenBreakpointChange("640px", close), []);
-  useEffect(() => {
-    document.body.style.overflow = isOpen ? "hidden" : "auto";
-  }, [isOpen]);
+  useEffect(
+    () => listenBreakpointChange("640px", handleMenuItemClick),
+    [isOpen]
+  );
 
   function handleButtonClick() {
-    setIsOpen(value => !value);
+    const newIsOpen = !isOpen;
+
+    if (!newIsOpen) {
+      allowPageScrolling();
+    } else {
+      preventPageScrolling();
+    }
+
+    setIsOpen(newIsOpen);
   }
 
-  function close() {
+  function allowPageScrolling() {
+    const page = document.documentElement;
+    page.style.position = "static";
+    page.style.overflowY = "auto";
+    page.scrollTop = pageScroll;
+  }
+
+  function preventPageScrolling() {
+    const page = document.documentElement;
+    const currentScroll = page.scrollTop;
+    page.style.position = "fixed";
+    page.style.overflowY = "scroll";
+    setPageScroll(currentScroll);
+  }
+
+  function handleMenuItemClick() {
+    if (!isOpen) {
+      return;
+    }
+    allowPageScrolling();
     setIsOpen(false);
   }
 
@@ -26,7 +54,7 @@ export default function Menu({ items }) {
       key={item.name}
       name={item.name}
       offset={item.offset}
-      onClick={close}
+      onClick={handleMenuItemClick}
     />
   ));
 
