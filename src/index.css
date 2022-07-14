@@ -81,6 +81,6 @@
   }
 
   .select-icon {
-    @apply absolute -translate-x-1/2 top-[55%] -translate-y-1/2 left-1/2 pointer-events-none text-3xl sm:text-2xl bg-contrast;
+    @apply absolute -translate-x-1/2 top-[55%] -translate-y-1/2 left-1/2 pointer-events-none text-xl sm:text-2xl bg-contrast w-8 h-8 sm:w-7 sm:h-7;
   }
 }
