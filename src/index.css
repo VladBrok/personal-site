@@ -75,4 +75,12 @@
   .text-min-2xl {
     @apply text-2xl lg:text-3xl;
   }
+
+  .header {
+    @apply decoration-blue underline underline-offset-2 text-contrast;
+  }
+
+  .select-icon {
+    @apply absolute -translate-x-1/2 top-[55%] -translate-y-1/2 left-1/2 pointer-events-none text-3xl sm:text-2xl bg-contrast;
+  }
 }
