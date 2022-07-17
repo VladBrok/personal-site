@@ -58,7 +58,7 @@ export default function Menu({ items }) {
       <div role="dialog" aria-label="Select menu option">
         <MobileMenuButton isOpen={isOpen} onClick={handleButtonClick} />
         <nav
-          className={`${display} fixed top-0 left-0 w-screen h-screen flex flex-col items-center justify-center text-center text-xl bg-white dark:bg-darkgray sm:relative sm:w-fit sm:h-fit sm:text-lg sm:block`}
+          className={`${display} fixed top-0 left-0 flex h-screen w-screen flex-col items-center justify-center bg-white text-center text-xl dark:bg-darkgray sm:relative sm:block sm:h-fit sm:w-fit sm:text-lg`}
         >
           <ul className="sm:flex md:gap-2">{menuItems}</ul>
         </nav>

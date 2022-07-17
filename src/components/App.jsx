@@ -29,7 +29,7 @@ export default function App() {
 
   return (
     <>
-      <header className="z-30 text-min-lg fixed w-full top-0 left-0 p-2 flex justify-between items-center shadow-md bg-white text-contrast dark:bg-darkgray dark:shadow-slate sm:p-4 md:p-5 sm:items-baseline">
+      <header className="text-min-lg text-contrast fixed top-0 left-0 z-30 flex w-full items-center justify-between bg-white p-2 shadow-md dark:bg-darkgray dark:shadow-slate sm:items-baseline sm:p-4 md:p-5">
         <a href="/">
           Vlad<span className="text-blue">Brok</span>
         </a>
@@ -39,9 +39,9 @@ export default function App() {
 
       <main className="mx-6 sm:mx-8 md:mx-14 lg:mx-32">
         <Section className="flex items-center" name="about">
-          <h1 className="font-semibold my-4">
-            <span className="font-normal block">Hi, my name is</span>{" "}
-            <span className="text-min-2xl block header md:mb-6 md:mt-2">
+          <h1 className="my-4 font-semibold">
+            <span className="block font-normal">Hi, my name is</span>{" "}
+            <span className="text-min-2xl header block md:mb-6 md:mt-2">
               Vladislav Brakalo
             </span>
           </h1>
@@ -53,24 +53,24 @@ export default function App() {
         </Section>
 
         <Section className="text-center" name="projects">
-          <h2 className="font-semibold text-min-xl my-8 header">Projects</h2>
+          <h2 className="text-min-xl header my-8 font-semibold">Projects</h2>
           <div className="grid auto-rows-fr gap-10 md:grid-cols-2 xl:grid-cols-3">
             {projects}
           </div>
         </Section>
 
         <Section
-          className="text-center flex items-center justify-center mt-28"
+          className="mt-28 flex items-center justify-center text-center"
           name="contact"
         >
-          <h2 className="font-semibold text-min-xl header">Contact me</h2>
+          <h2 className="text-min-xl header font-semibold">Contact me</h2>
           <ContactForm />
         </Section>
       </main>
 
-      <footer className="border-t-[2px] border-gray text-center p-6 mt-6 md:p-10">
+      <footer className="mt-6 border-t-[2px] border-gray p-6 text-center md:p-10">
         <div className="flex justify-center">
-          <div className="flex-centered group relative text-contrast">
+          <div className="flex-centered text-contrast group relative">
             <a href="https://github.com/VladBrok/">
               <TechnologyIcon
                 id="github"
@@ -78,7 +78,7 @@ export default function App() {
                 isColored={false}
               />
             </a>
-            <span className="absolute left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 group-hover:mb-16 [transition:opacity_0.6s,margin_0.6s] pointer-events-none">
+            <span className="pointer-events-none absolute left-1/2 -translate-x-1/2 opacity-0 [transition:opacity_0.6s,margin_0.6s] group-hover:mb-16 group-hover:opacity-100">
               Github
             </span>
           </div>

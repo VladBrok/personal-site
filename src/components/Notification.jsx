@@ -20,7 +20,7 @@ export default function Notification({ isError, onClose, children }) {
 
   return (
     <div
-      className={`fixed z-50 -translate-x-1/2 bottom-0 rounded-xl left-1/2 flex items-center justify-center text-center font-semibold w-[min(70%,22rem)] py-4 px-8 [transition:visibility_0.6s,transform_0.6s] text-white dark:text-light min-h-14 shadow-sm ${colors} ${visibility}`}
+      className={`min-h-14 fixed bottom-0 left-1/2 z-50 flex w-[min(70%,22rem)] -translate-x-1/2 items-center justify-center rounded-xl py-4 px-8 text-center font-semibold text-white shadow-sm [transition:visibility_0.6s,transform_0.6s] dark:text-light ${colors} ${visibility}`}
       ref={containerRef}
     >
       {children}

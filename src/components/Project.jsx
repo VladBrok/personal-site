@@ -23,22 +23,22 @@ export default function Project({
   const backVisibility = isRotated ? "visible" : "invisible";
 
   return (
-    <div className="max-w-[20rem] xsm:w-[20rem] m-auto h-full [perspective:1000px]">
+    <div className="m-auto h-full max-w-[20rem] [perspective:1000px] xsm:w-[20rem]">
       <div
-        className={`${rotation} relative flex flex-col items-center w-full h-full [transition:transform_1s] [transform-style:preserve-3d] shadow-around shadow-lightgray dark:shadow-gray rounded-2xl`}
+        className={`${rotation} shadow-around relative flex h-full w-full flex-col items-center rounded-2xl shadow-lightgray [transition:transform_1s] [transform-style:preserve-3d] dark:shadow-gray`}
       >
-        <div className="flex flex-col items-center w-full h-full [backface-visibility:hidden]">
+        <div className="flex h-full w-full flex-col items-center [backface-visibility:hidden]">
           <img
-            className="w-full h-[13rem] block rounded-t-2xl object-cover"
+            className="block h-[13rem] w-full rounded-t-2xl object-cover"
             src={imageUrl}
             alt=""
           />
-          <div className="px-4 flex flex-col w-full h-full">
-            <h3 className="font-semibold text-min-lg my-4 text-contrast sm:my-6">
+          <div className="flex h-full w-full flex-col px-4">
+            <h3 className="text-min-lg text-contrast my-4 font-semibold sm:my-6">
               {title}
             </h3>
             <p className="mb-6">{description}</p>
-            <div className="flex flex-wrap justify-center mt-auto text-contrast">
+            <div className="text-contrast mt-auto flex flex-wrap justify-center">
               {children}
             </div>
           </div>
@@ -46,7 +46,7 @@ export default function Project({
         </div>
 
         <div
-          className={`${backVisibility} flex flex-col absolute top-0 rotate-y-180 w-full h-full [backface-visibility:hidden] [transition:visibility_0.5s]`}
+          className={`${backVisibility} rotate-y-180 absolute top-0 flex h-full w-full flex-col [backface-visibility:hidden] [transition:visibility_0.5s]`}
         >
           <div className="mt-auto px-8">
             <a className="button" href={demoUrl}>

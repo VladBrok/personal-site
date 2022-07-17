@@ -19,7 +19,7 @@ export default function InputContainer({
         name: id,
         required,
       })}
-      <p className="invisible peer-invalid:visible text-red mb-4 md:mb-6">
+      <p className="invisible mb-4 text-red peer-invalid:visible md:mb-6">
         {errorMessage}
       </p>
     </div>

@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-contrast text-gray dark:text-slate text-min-base;
+    @apply bg-contrast text-min-base text-gray dark:text-slate;
   }
 
   a,
@@ -18,7 +18,7 @@
 
 @layer components {
   .bar {
-    @apply bg-black dark:bg-light w-full h-[0.35rem] rounded [transition:all_0.5s_ease-in-out,background-color_0s];
+    @apply h-[0.35rem] w-full rounded bg-black [transition:all_0.5s_ease-in-out,background-color_0s] dark:bg-light;
   }
 
   .section {
@@ -26,21 +26,21 @@
   }
 
   .button-like {
-    @apply hover:[filter:brightness(115%)] active:scale-95 disabled:active:scale-100 hover:cursor-pointer disabled:opacity-60 disabled:filter-none disabled:cursor-default;
+    @apply hover:cursor-pointer hover:[filter:brightness(115%)] active:scale-95 disabled:cursor-default disabled:opacity-60 disabled:filter-none disabled:active:scale-100;
   }
 
   .button {
-    @apply button-like block w-full px-3 py-2 text-white dark:text-darkgray bg-blue hover:shadow-sm disabled:shadow-none hover:shadow-blue rounded-md text-center my-6 md:my-10 md:py-3 md:px-4;
+    @apply button-like my-6 block w-full rounded-md bg-blue px-3 py-2 text-center text-white hover:shadow-sm hover:shadow-blue disabled:shadow-none dark:text-darkgray md:my-10 md:py-3 md:px-4;
   }
 
   .input {
-    @apply block rounded-md p-1 border-2 mt-1 border-lightgray w-full md:py-2 md:px-3 dark:bg-lightslate dark:border-opacity-0 text-contrast invalid:border-red dark:invalid:border-red;
+    @apply text-contrast mt-1 block w-full rounded-md border-2 border-lightgray p-1 invalid:border-red dark:border-opacity-0 dark:bg-lightslate dark:invalid:border-red md:py-2 md:px-3;
   }
 }
 
 @layer utilities {
   .flex-centered {
-    @apply flex items-center mx-2 my-1;
+    @apply mx-2 my-1 flex items-center;
   }
 
   .shadow-around {
@@ -77,10 +77,10 @@
   }
 
   .header {
-    @apply decoration-blue underline underline-offset-2 text-contrast;
+    @apply text-contrast underline decoration-blue underline-offset-2;
   }
 
   .select-icon {
-    @apply absolute -translate-x-1/2 top-[55%] -translate-y-1/2 left-1/2 pointer-events-none text-xl sm:text-2xl bg-contrast w-8 h-8 sm:w-7 sm:h-7;
+    @apply bg-contrast pointer-events-none absolute top-[55%] left-1/2 h-8 w-8 -translate-x-1/2 -translate-y-1/2 text-xl sm:h-7 sm:w-7 sm:text-2xl;
   }
 }
