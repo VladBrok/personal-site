@@ -18,7 +18,7 @@
 
 @layer components {
   .bar {
-    @apply h-[0.35rem] w-full rounded bg-black [transition:all_0.5s_ease-in-out,background-color_0s] dark:bg-light;
+    @apply h-[0.35rem] w-10 rounded bg-black [transition:all_0.5s_ease-in-out] dark:bg-light;
   }
 
   .section {
