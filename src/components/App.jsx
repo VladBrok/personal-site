@@ -68,20 +68,18 @@ export default function App() {
         </Section>
       </main>
 
-      <footer className="mt-6 border-t-[2px] border-gray p-6 text-center md:p-10">
-        <div className="flex justify-center">
-          <div className="flex-centered text-contrast group relative">
-            <a href="https://github.com/VladBrok/">
-              <TechnologyIcon
-                id="github"
-                className="text-3xl "
-                isColored={false}
-              />
-            </a>
-            <span className="pointer-events-none absolute left-1/2 -translate-x-1/2 opacity-0 [transition:opacity_0.6s,margin_0.6s] group-hover:mb-16 group-hover:opacity-100">
+      <footer className="mt-6 border-t-[2px] border-gray p-6 text-center md:p-8">
+        <div className="text-contrast flex justify-center">
+          <a className="group relative" href="https://github.com/VladBrok/">
+            <TechnologyIcon
+              id="github"
+              className="text-3xl "
+              isColored={false}
+            />
+            <span className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 opacity-0 [transition:opacity_0.6s,bottom_0.6s] group-hover:bottom-9 group-hover:opacity-100">
               Github
             </span>
-          </div>
+          </a>
         </div>
         <p className="mt-4">Copyright (c) 2022 Vladislav Brakalo</p>
       </footer>

@@ -42,7 +42,7 @@ export default function Project({
               {children}
             </div>
           </div>
-          <Arrow onClick={handleFrontArrowClick} />
+          <Arrow onClick={handleFrontArrowClick} text="Flip project card" />
         </div>
 
         <div
@@ -56,7 +56,7 @@ export default function Project({
               <span className="sr-only">{title} </span>Code
             </a>
           </div>
-          <Arrow onClick={handleBackArrowClick} />
+          <Arrow onClick={handleBackArrowClick} text="Flip project card" />
         </div>
       </div>
     </div>
