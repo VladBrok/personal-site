@@ -4,7 +4,8 @@ module.exports = {
   darkMode: "class",
   theme: {
     colors: {
-      blue: "#14ABC7",
+      blue: "#0F8296",
+      lightblue: "#14ABC7",
       white: "#FFF",
       gray: "#4F4E51",
       lightgray: "#ACACAC",
@@ -14,6 +15,7 @@ module.exports = {
       light: "#E2E8F0",
       black: "#000",
       red: "#DC3545",
+      lightred: "#E25A68",
     },
     extend: {
       screens: {

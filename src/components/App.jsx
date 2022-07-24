@@ -31,7 +31,7 @@ export default function App() {
     <>
       <header className="text-min-lg text-contrast fixed top-0 left-0 z-30 flex w-full items-center justify-between bg-white p-2 shadow-md dark:bg-darkgray dark:shadow-slate sm:items-baseline sm:p-4 md:p-5">
         <a href="/">
-          Vlad<span className="text-blue">Brok</span>
+          Vlad<span className="text-highlight">Brok</span>
         </a>
         <ThemeSelect onChange={handleThemeChange} value={theme} />
         <Menu items={MENU_ITEMS} />

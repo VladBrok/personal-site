@@ -16,7 +16,9 @@ export default function Notification({ isError, onClose, children }) {
     };
   }
 
-  const colors = isError ? "bg-red shadow-red" : "bg-blue shadow-blue";
+  const colors = isError
+    ? "bg-danger shadow-danger"
+    : "bg-highlight shadow-highlight";
 
   return (
     <div
