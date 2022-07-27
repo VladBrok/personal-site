@@ -1,4 +1,5 @@
 import Arrow from "./Arrow";
+import ProjectLink from "./ProjectLink";
 import { useState } from "react";
 import { HiOutlineStatusOnline } from "react-icons/hi";
 import { BsFileEarmarkCode } from "react-icons/bs";
@@ -51,15 +52,18 @@ export default function Project({
           className={`${backVisibility} rotate-y-180 absolute top-0 flex h-full w-full flex-col [backface-visibility:hidden] [transition:visibility_0.5s]`}
         >
           <div className="mt-auto px-8">
-            <a className="button mx-auto max-w-[15rem]" href={demoUrl}>
-              <HiOutlineStatusOnline className="mb-[0.2rem] inline-block" />{" "}
-              <span className="sr-only">{title} </span>Demo
-            </a>
-            <a className="button mx-auto max-w-[15rem]" href={codeUrl}>
-              <BsFileEarmarkCode className="mb-[0.2rem] inline-block" />{" "}
-              <span className="sr-only">{title} </span>
-              Code
-            </a>
+            <ProjectLink
+              url={demoUrl}
+              Icon={HiOutlineStatusOnline}
+              name="Demo"
+              screenReaderOnlyName={title}
+            />
+            <ProjectLink
+              url={codeUrl}
+              Icon={BsFileEarmarkCode}
+              name="Code"
+              screenReaderOnlyName={title}
+            />
           </div>
           <Arrow onClick={handleBackArrowClick} text="Flip project card" />
         </div>
