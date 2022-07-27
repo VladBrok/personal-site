@@ -27,7 +27,7 @@ export default function Project({
       <div
         className={`${rotation} shadow-around relative flex h-full w-full flex-col items-center rounded-2xl shadow-lightgray [transition:transform_1s] [transform-style:preserve-3d] dark:shadow-gray`}
       >
-        <div className="flex h-full w-full flex-col items-center [backface-visibility:hidden]">
+        <div className="flex h-full w-full flex-col items-center [backface-visibility:hidden] [transform:rotateX(0deg)]">
           <img
             className="block h-[13rem] w-full rounded-t-2xl object-cover"
             src={imageUrl}
