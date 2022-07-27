@@ -4,7 +4,7 @@ export default function Label({ htmlFor, required, children }) {
       {children}
       {required && (
         <abbr
-          className="text-red no-underline pl-1"
+          className="text-danger pl-1 no-underline"
           title="required"
           aria-label="required"
         >
