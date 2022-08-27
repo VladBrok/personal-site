@@ -1,4 +1,4 @@
-import Arrow from "./Arrow";
+import FlipCardButton from "./FlipCardButton";
 import ProjectLink from "./ProjectLink";
 import Gallery from "./Gallery";
 import { useState } from "react";
@@ -43,7 +43,7 @@ export default function Project({
                 {children}
               </div>
             </div>
-            <Arrow onClick={handleFrontArrowClick} text="Flip project card" />
+            <FlipCardButton onClick={handleFrontArrowClick} />
           </div>
 
           <div
@@ -63,7 +63,7 @@ export default function Project({
                 screenReaderOnlyName={title}
               />
             </div>
-            <Arrow onClick={handleBackArrowClick} text="Flip project card" />
+            <FlipCardButton onClick={handleBackArrowClick} />
           </div>
         </div>
       </div>

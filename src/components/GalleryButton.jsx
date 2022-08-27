@@ -1,4 +1,5 @@
-// fixme: dup with Arrow.jsx
+import EmptyButton from "./EmptyButton";
+
 export default function GalleryButton({
   label,
   className,
@@ -6,9 +7,12 @@ export default function GalleryButton({
   ...buttonProps
 }) {
   return (
-    <button className={`gallery-button ${className}`} {...buttonProps}>
+    <EmptyButton
+      className={`gallery-button ${className}`}
+      label={label}
+      {...buttonProps}
+    >
       {children}
-      <span className="sr-only">{label}</span>
-    </button>
+    </EmptyButton>
   );
 }
