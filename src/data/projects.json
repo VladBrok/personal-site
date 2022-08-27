@@ -2,17 +2,17 @@
   {
     "title": "This is the project",
     "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem molestias modi tempora voluptate reiciendis, voluptatem vero eum eos accusantium cumque.",
-    "imageUrl": "/images/project-placeholder.jpg",
+    "imageUrls": ["/images/project-placeholder.jpg", "/images/icon.png"],
     "demoUrl": "https://google.com",
     "codeUrl": "https://stackoverflow.com",
     "technologies": ["html5", "css3", "javascript", "react"]
   },
   {
-    "title": "Another One",
-    "description": "Lorem ipsum dolor sit, amet",
-    "imageUrl": "/images/project-placeholder.jpg",
-    "demoUrl": "https://yandex.ru",
+    "title": "Another one",
+    "description": "dolor sit, amet consectetur adipisicing elit. Quidem molestias modi tempora voluptate reiciendis, voluptatem vero eum eos accusantium cumque. consectetur adipisicing elit. Quidem molestias modi",
+    "imageUrls": ["/images/project-placeholder.jpg", "/images/icon.png"],
+    "demoUrl": "https://google.com",
     "codeUrl": "https://stackoverflow.com",
-    "technologies": ["html5", "css3"]
+    "technologies": ["html5", "css3", "javascript", "react"]
   }
 ]
