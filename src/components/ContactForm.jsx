@@ -60,7 +60,7 @@ export default function ContactForm() {
         id="msg"
         label="Message:"
         input={props => (
-          <textarea cols="30" rows="6" maxLength={100} {...props}></textarea>
+          <textarea cols="30" rows="5" maxLength={150} {...props}></textarea>
         )}
       />
       <div>
