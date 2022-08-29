@@ -29,7 +29,7 @@ export default function App() {
 
   return (
     <>
-      <header className="text-min-lg text-contrast fixed top-0 left-0 z-30 flex w-full items-center justify-between bg-white p-2 shadow-md dark:bg-darkgray dark:shadow-slate sm:items-baseline sm:p-4 md:p-5">
+      <header className="text-min-lg text-contrast bg-contrast fixed top-0 left-0 z-30 flex w-full items-center justify-between p-2 shadow-md dark:shadow-slate sm:items-baseline sm:p-4 md:p-5">
         <a href="/">
           Vlad<span className="text-highlight">Brok</span>
         </a>

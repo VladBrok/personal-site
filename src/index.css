@@ -33,8 +33,12 @@
     @apply button-like bg-highlight hover:shadow-highlight my-6 block w-full rounded-md px-4 py-3 text-center text-white hover:shadow-sm disabled:shadow-none dark:text-darkgray md:my-10 md:py-4 md:px-5;
   }
 
+  .gallery-button {
+    @apply button-like bg-contrast text-contrast absolute top-1/2 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-full text-3xl shadow-sm shadow-darkgray dark:shadow-slate;
+  }
+
   .input {
-    @apply text-contrast invalid:border-danger mt-1 block w-full rounded-md border-2 border-lightgray p-1 dark:border-opacity-0 dark:bg-lightslate md:py-2 md:px-3;
+    @apply text-contrast mt-1 block w-full rounded-md border-2 border-lightgray p-1 dark:border-opacity-0 dark:bg-lightslate md:py-2 md:px-3;
   }
 }
 
