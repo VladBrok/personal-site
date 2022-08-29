@@ -54,7 +54,7 @@ export default function ContactForm() {
         label="Email:"
         required={true}
         errorMessage="Please enter a valid email address"
-        input={props => <input type="email" {...props} />}
+        input={props => <input type="email" maxLength={254} {...props} />}
       />
       <InputContainer
         id="msg"
