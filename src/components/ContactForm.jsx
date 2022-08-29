@@ -6,14 +6,23 @@ const Notification = lazy(() => import("./Notification"));
 
 export default function ContactForm() {
   const [showNotification, setShowNotification] = useState(false);
-  const [isError, setIsError] = useState(false);
+  const [isSendError, setIsSendError] = useState(false);
+  const [isInputError, setIsInputError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
   async function handleSubmit(e) {
     e.preventDefault();
+    const form = e.target;
+
+    if (!form.checkValidity()) {
+      setIsInputError(true);
+      form
+        .querySelector(":invalid")
+        .scrollIntoView({ behavior: "smooth", block: "center" });
+      return;
+    }
 
     try {
-      const form = e.target;
       const formData = new FormData(form);
       setIsLoading(true);
       const response = await sendEmail(formData);
@@ -23,9 +32,9 @@ export default function ContactForm() {
         throw new Error();
       }
 
-      setIsError(false);
+      setIsSendError(false);
     } catch {
-      setIsError(true);
+      setIsSendError(true);
     } finally {
       setShowNotification(true);
       setIsLoading(false);
@@ -36,16 +45,17 @@ export default function ContactForm() {
     setShowNotification(false);
   }
 
-  const notification = isError
+  const notification = isSendError
     ? "Failed to send message. Please try again later"
     : "Message sent!";
 
   return (
-    <form className="my-4 text-left md:w-96" onSubmit={handleSubmit}>
+    <form className="my-4 text-left md:w-96" onSubmit={handleSubmit} noValidate>
       <InputContainer
         id="name"
         label="Name:"
         required={true}
+        isInputError={isInputError}
         errorMessage="Please enter your name"
         input={props => <input type="text" maxLength={25} {...props} />}
       />
@@ -53,12 +63,14 @@ export default function ContactForm() {
         id="email"
         label="Email:"
         required={true}
+        isInputError={isInputError}
         errorMessage="Please enter a valid email address"
         input={props => <input type="email" maxLength={254} {...props} />}
       />
       <InputContainer
         id="msg"
         label="Message:"
+        isInputError={isInputError}
         input={props => (
           <textarea cols="30" rows="5" maxLength={150} {...props}></textarea>
         )}
@@ -69,7 +81,10 @@ export default function ContactForm() {
         </button>
         <Suspense fallback={null}>
           {showNotification && (
-            <Notification isError={isError} onClose={handleNotificationClose}>
+            <Notification
+              isError={isSendError}
+              onClose={handleNotificationClose}
+            >
               {notification}
             </Notification>
           )}

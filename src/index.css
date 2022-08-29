@@ -38,7 +38,7 @@
   }
 
   .input {
-    @apply text-contrast invalid:border-danger mt-1 block w-full rounded-md border-2 border-lightgray p-1 dark:border-opacity-0 dark:bg-lightslate md:py-2 md:px-3;
+    @apply text-contrast mt-1 block w-full rounded-md border-2 border-lightgray p-1 dark:border-opacity-0 dark:bg-lightslate md:py-2 md:px-3;
   }
 }
 

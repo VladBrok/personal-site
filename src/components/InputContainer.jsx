@@ -5,21 +5,24 @@ export default function InputContainer({
   label,
   input,
   required,
-  className = "",
+  isInputError,
   errorMessage = "",
 }) {
+  const invalidInputStyles = isInputError ? "invalid:border-danger" : "";
+  const errorMessageStyles = isInputError ? "peer-invalid:visible" : "";
+
   return (
     <div>
       <Label htmlFor={id} required={required}>
         {label}
       </Label>
       {input({
-        className: `input peer ${className}`,
+        className: `input peer ${invalidInputStyles}`,
         id,
         name: id,
         required,
       })}
-      <p className="text-danger invisible mb-4 peer-invalid:visible md:mb-6">
+      <p className={`text-danger invisible mb-2 md:mb-3 ${errorMessageStyles}`}>
         {errorMessage}
       </p>
     </div>
