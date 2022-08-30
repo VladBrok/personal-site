@@ -3,9 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "node scripts/add-image-urls.mjs && vite",
+    "build": "node scripts/add-image-urls.mjs && vite build",
+    "preview": "node scripts/add-image-urls.mjs && vite preview"
   },
   "dependencies": {
     "devicon": "^2.15.1",
@@ -22,6 +22,7 @@
     "@vitejs/plugin-react": "^1.3.0",
     "autoprefixer": "^10.4.7",
     "postcss": "^8.4.14",
+    "prettier": "^2.7.1",
     "prettier-plugin-tailwindcss": "^0.1.12",
     "tailwindcss": "^3.1.5",
     "vite": "^2.9.9"
