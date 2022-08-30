@@ -39,7 +39,7 @@ export default function Project({
                 {title}
               </h3>
               <p className="mb-6">{description}</p>
-              <div className="text-contrast mt-auto flex flex-wrap justify-center">
+              <div className="text-contrast mt-auto mb-3 flex flex-wrap justify-center">
                 {children}
               </div>
             </div>

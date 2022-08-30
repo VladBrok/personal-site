@@ -5,7 +5,7 @@ import Section from "./Section";
 import ContactForm from "./ContactForm";
 import TechnologyIcon from "./TechnologyIcon";
 import ThemeSelect from "./ThemeSelect";
-import TECHNOLOGIES from "../data/technologies.json";
+import TECHNOLOGIES from "../data/technologies";
 import PROJECTS from "../data/projects.json";
 import MENU_ITEMS from "../data/menuItems.json";
 import { changeTheme, getCurrentTheme } from "../lib/theme";
@@ -22,7 +22,12 @@ export default function App() {
   const projects = PROJECTS.map(data => (
     <Project key={data.title} {...data}>
       {data.technologies.map(techId => (
-        <Technology key={techId} id={techId} name={TECHNOLOGIES[techId]} />
+        <Technology
+          key={techId}
+          id={techId}
+          name={TECHNOLOGIES[techId].name}
+          isColored={TECHNOLOGIES[techId].isColored}
+        />
       ))}
     </Project>
   ));
