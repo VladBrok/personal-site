@@ -14,6 +14,14 @@
   textarea {
     @apply outline-1 outline-black dark:outline-light;
   }
+
+  [data-rmiz-modal-overlay="visible"] {
+    @apply bg-contrast !important;
+  }
+
+  [data-rmiz-btn-unzoom] {
+    @apply text-contrast !important;
+  }
 }
 
 @layer components {
