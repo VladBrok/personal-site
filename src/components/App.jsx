@@ -42,7 +42,7 @@ export default function App() {
         <Menu items={MENU_ITEMS} />
       </header>
 
-      <main className="mx-6 sm:mx-8 md:mx-14 lg:mx-32">
+      <main className="mx-6 md:mx-8 lg:mx-16">
         <Section className="flex items-center" name="about">
           <h1 className="my-4 font-semibold">
             <span className="block font-normal">Hi, my name is</span>{" "}
@@ -59,7 +59,7 @@ export default function App() {
 
         <Section className="text-center" name="projects">
           <h2 className="text-min-xl header my-8 font-semibold">Projects</h2>
-          <div className="grid auto-rows-fr gap-10 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid auto-rows-fr gap-10 lg:grid-cols-2 2xl:grid-cols-3">
             {projects}
           </div>
         </Section>
