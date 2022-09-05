@@ -28,7 +28,7 @@ export default function Project({
 
   return (
     <>
-      <div className="m-auto h-full max-w-[20rem] [perspective:1000px] xsm:w-[20rem]">
+      <div className="m-auto h-full max-w-[24rem] [perspective:1000px]">
         <div
           className={`${rotation} shadow-around relative flex h-full w-full flex-col items-center rounded-2xl shadow-lightgray [transition:transform_1s] [transform-style:preserve-3d] dark:shadow-gray`}
         >
