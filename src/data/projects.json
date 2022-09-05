@@ -14,5 +14,14 @@
     "demoUrl": "https://payback-store.vercel.app/",
     "codeUrl": "https://github.com/VladBrok/payback/",
     "technologies": ["nextjs", "react", "javascript", "sass", "mysql"]
+  },
+  {
+    "title": "Navigatio - a CLI app",
+    "description": "This application allows you to quickly navigate between folders. It supports commands such as creating an alias for a folder, deleting an alias, showing all aliases, going to the specified folder, changing settings, showing all available commands and canceling the previous command.",
+    "imageUrls": ["/images/navigatio/1.png", "/images/navigatio/2.png"],
+    "pathToImages": "/images/navigatio/",
+    "demoUrl": "https://screenrec.com/share/RJh5qOrtn0",
+    "codeUrl": "https://github.com/VladBrok/navigatio",
+    "technologies": ["csharp", "bash"]
   }
 ]
