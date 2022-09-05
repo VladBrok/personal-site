@@ -23,7 +23,7 @@ export default function Gallery({ imageUrls }) {
             <div className="embla__slide flex-[0_0_100%]" key={url}>
               <Zoom>
                 <img
-                  className="block h-[15rem] w-full rounded-t-2xl object-cover"
+                  className="block h-[13rem] w-full rounded-t-2xl object-contain xsm:object-cover"
                   src={url}
                   alt=""
                 />
