@@ -1,7 +1,6 @@
 import { exec } from "child_process";
 import fs from "fs/promises";
 import projects from "../src/data/projects.json" assert { type: "json" };
-
 const result = [...projects];
 
 for (let i = 0; i < result.length; i++) {
