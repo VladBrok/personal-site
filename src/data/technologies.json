@@ -10,5 +10,6 @@
   "sass": { "name": "Sass", "isColored": true },
   "mysql": { "name": "MySql", "isColored": true },
   "csharp": { "name": "CSharp", "isColored": true },
-  "bash": { "name": "bash", "isColored": false }
+  "bash": { "name": "bash", "isColored": false },
+  "postgresql": { "name": "PostgreSQL", "isColored": true }
 }

@@ -16,6 +16,20 @@
     "technologies": ["nextjs", "react", "javascript", "sass", "mysql"]
   },
   {
+    "title": "Employment Agency - a coursework",
+    "description": "This project was necessary to complete the university course \"Databases\". I wrote almost the entire front end of the site using vanilla JavaScript, which allowed me to deepen my knowledge of this programming language and served as a good basis for studying frameworks such as React.",
+    "imageUrls": [
+      "/images/employment-agency/1.png",
+      "/images/employment-agency/2.png",
+      "/images/employment-agency/3.png",
+      "/images/employment-agency/4.png"
+    ],
+    "pathToImages": "/images/employment-agency/",
+    "demoUrl": "https://employmentagency.surge.sh",
+    "codeUrl": "https://github.com/VladBrok/employment-agency/",
+    "technologies": ["html5", "css3", "javascript", "postgresql", "csharp"]
+  },
+  {
     "title": "Navigatio - a CLI app",
     "description": "This application allows you to quickly navigate between folders. It supports commands such as creating an alias for a folder, deleting an alias, cancelling previous commands and more. This app is also available for two operating systems: Windows and Linux.",
     "imageUrls": ["/images/navigatio/1.png", "/images/navigatio/2.png"],
