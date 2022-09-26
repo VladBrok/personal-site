@@ -98,7 +98,7 @@ export default function App() {
 
         <Section className="text-center" name="projects">
           <h2 className="text-min-xl header my-8 font-semibold">Projects</h2>
-          <div className="grid auto-rows-fr gap-10 lg:grid-cols-2 2xl:grid-cols-3">
+          <div className="flex flex-wrap justify-center gap-16 sm:gap-20 lg:gap-28">
             {projects}
           </div>
         </Section>
