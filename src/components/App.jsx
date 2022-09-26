@@ -46,15 +46,54 @@ export default function App() {
         <Section className="flex items-center" name="about">
           <h1 className="my-4 font-semibold">
             <span className="block font-normal">Hi, my name is</span>{" "}
-            <span className="text-min-2xl header block md:mb-6 md:mt-2">
+            <span className="text-min-2xl header block md:mb-5 md:mt-1">
               Vladislav Brakalo
             </span>
           </h1>
-          <p className="-mt-1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-            praesentium, reprehenderit quos a voluptatibus voluptatum ipsa quia
-            nemo inventore eum.
-          </p>
+          <article className="-mt-1 max-w-4xl">
+            <p>
+              I'm a student studying software engineering at Donetsk National
+              Technical University.
+            </p>
+            <p>
+              In spare time, I create{" "}
+              <a className="link" href="https://github.com/VladBrok/">
+                personal projects
+              </a>{" "}
+              and contribute to open source software.
+            </p>
+            <div className="my-2">
+              For example, I've contributed to:{" "}
+              <ul className="my-1">
+                <li className="list-item">
+                  <a
+                    className="link"
+                    href="https://github.com/MitchellMarkGeorge/TabButler"
+                  >
+                    TabButler
+                  </a>
+                  , a browser extension for managing tabs
+                </li>
+                <li className="list-item">
+                  {" "}
+                  <a
+                    className="link"
+                    href="https://github.com/rohitdasu/projectmate"
+                  >
+                    Projectmate
+                  </a>
+                  , a site for searching open source projects
+                </li>
+              </ul>
+            </div>
+            <p>
+              You can contact me via{" "}
+              <a className="link" href="https://t.me/VladBrok">
+                Telegram
+              </a>{" "}
+              or Discord (VladBrok#3994).
+            </p>
+          </article>
         </Section>
 
         <Section className="text-center" name="projects">

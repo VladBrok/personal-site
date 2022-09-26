@@ -16,6 +16,8 @@ module.exports = {
       black: "#000",
       red: "#DC3545",
       lightred: "#E25A68",
+      link: "#1A73E8",
+      lightlink: "#2E80EA",
     },
     extend: {
       screens: {

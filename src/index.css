@@ -29,6 +29,10 @@
     @apply h-[0.35rem] w-10 rounded bg-black [transition:all_0.5s_ease-in-out] dark:bg-light;
   }
 
+  .list-item {
+    @apply ml-8 list-disc;
+  }
+
   .section {
     @apply min-h-screen;
   }
@@ -47,6 +51,10 @@
 
   .input {
     @apply text-contrast mt-1 block w-full rounded-md border-2 border-lightgray p-1 dark:border-opacity-0 dark:bg-lightslate md:py-2 md:px-3;
+  }
+
+  .link {
+    @apply text-link underline dark:text-lightlink;
   }
 }
 
@@ -117,7 +125,7 @@
   }
 
   .header {
-    @apply text-contrast underline decoration-blue underline-offset-2 dark:decoration-lightblue;
+    @apply text-contrast underline decoration-blue underline-offset-4 dark:decoration-lightblue;
   }
 
   .select-icon {
