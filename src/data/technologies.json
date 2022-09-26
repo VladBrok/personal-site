@@ -1,6 +1,15 @@
 {
-  "html5": "HTML",
-  "css3": "CSS",
-  "react": "React",
-  "javascript": "JavaScript"
+  "html5": { "name": "HTML", "isColored": true },
+  "css3": { "name": "CSS", "isColored": true },
+  "react": { "name": "React", "isColored": true },
+  "javascript": { "name": "JavaScript", "isColored": true },
+  "nextjs": {
+    "name": "Next.js",
+    "isColored": false
+  },
+  "sass": { "name": "Sass", "isColored": true },
+  "mysql": { "name": "MySql", "isColored": true },
+  "csharp": { "name": "CSharp", "isColored": true },
+  "bash": { "name": "bash", "isColored": false },
+  "postgresql": { "name": "PostgreSQL", "isColored": true }
 }

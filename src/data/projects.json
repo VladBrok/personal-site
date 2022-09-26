@@ -1,18 +1,41 @@
 [
   {
-    "title": "This is the project",
-    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem molestias modi tempora voluptate reiciendis, voluptatem vero eum eos accusantium cumque.",
-    "imageUrl": "/images/project-placeholder.jpg",
-    "demoUrl": "https://google.com",
-    "codeUrl": "https://stackoverflow.com",
-    "technologies": ["html5", "css3", "javascript", "react"]
+    "title": "Payback - an e-commerce site",
+    "description": "This pet project is an e-commerce store where users can buy and sell products. In addition, users can leave reviews of purchased products and communicate with each other using the built-in messenger.",
+    "imageUrls": [
+      "/images/payback/1.png",
+      "/images/payback/2.png",
+      "/images/payback/3.png",
+      "/images/payback/4.png",
+      "/images/payback/5.png",
+      "/images/payback/6.png"
+    ],
+    "pathToImages": "/images/payback/",
+    "demoUrl": "https://payback-store.vercel.app/",
+    "codeUrl": "https://github.com/VladBrok/payback/",
+    "technologies": ["nextjs", "react", "javascript", "sass", "mysql"]
   },
   {
-    "title": "Another One",
-    "description": "Lorem ipsum dolor sit, amet",
-    "imageUrl": "/images/project-placeholder.jpg",
-    "demoUrl": "https://yandex.ru",
-    "codeUrl": "https://stackoverflow.com",
-    "technologies": ["html5", "css3"]
+    "title": "Employment Agency - a coursework",
+    "description": "This project was necessary to complete the university course \"Databases\". I wrote almost the entire front end of the site using vanilla JavaScript, which allowed me to deepen my knowledge of this programming language and served as a good basis for studying frameworks such as React.",
+    "imageUrls": [
+      "/images/employment-agency/1.png",
+      "/images/employment-agency/2.png",
+      "/images/employment-agency/3.png",
+      "/images/employment-agency/4.png"
+    ],
+    "pathToImages": "/images/employment-agency/",
+    "demoUrl": "https://employmentagency.surge.sh",
+    "codeUrl": "https://github.com/VladBrok/employment-agency/",
+    "technologies": ["html5", "css3", "javascript", "postgresql", "csharp"]
+  },
+  {
+    "title": "Navigatio - a CLI app",
+    "description": "This application allows you to quickly navigate between folders. It supports commands such as creating an alias for a folder, deleting an alias, cancelling previous commands and more. This app is also available for two operating systems: Windows and Linux.",
+    "imageUrls": ["/images/navigatio/1.png", "/images/navigatio/2.png"],
+    "pathToImages": "/images/navigatio/",
+    "demoUrl": "https://screenrec.com/share/RJh5qOrtn0",
+    "codeUrl": "https://github.com/VladBrok/navigatio",
+    "technologies": ["csharp", "bash"]
   }
 ]

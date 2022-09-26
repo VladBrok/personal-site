@@ -5,7 +5,7 @@ import Section from "./Section";
 import ContactForm from "./ContactForm";
 import TechnologyIcon from "./TechnologyIcon";
 import ThemeSelect from "./ThemeSelect";
-import TECHNOLOGIES from "../data/technologies.json";
+import TECHNOLOGIES from "../data/technologies";
 import PROJECTS from "../data/projects.json";
 import MENU_ITEMS from "../data/menuItems.json";
 import { changeTheme, getCurrentTheme } from "../lib/theme";
@@ -22,14 +22,19 @@ export default function App() {
   const projects = PROJECTS.map(data => (
     <Project key={data.title} {...data}>
       {data.technologies.map(techId => (
-        <Technology key={techId} id={techId} name={TECHNOLOGIES[techId]} />
+        <Technology
+          key={techId}
+          id={techId}
+          name={TECHNOLOGIES[techId].name}
+          isColored={TECHNOLOGIES[techId].isColored}
+        />
       ))}
     </Project>
   ));
 
   return (
     <>
-      <header className="text-min-lg text-contrast fixed top-0 left-0 z-30 flex w-full items-center justify-between bg-white p-2 shadow-md dark:bg-darkgray dark:shadow-slate sm:items-baseline sm:p-4 md:p-5">
+      <header className="text-min-lg text-contrast bg-contrast fixed top-0 left-0 z-30 flex w-full items-center justify-between p-2 shadow-md dark:shadow-slate sm:items-baseline sm:p-4 md:p-5">
         <a href="/">
           Vlad<span className="text-highlight">Brok</span>
         </a>
@@ -37,24 +42,63 @@ export default function App() {
         <Menu items={MENU_ITEMS} />
       </header>
 
-      <main className="mx-6 sm:mx-8 md:mx-14 lg:mx-32">
+      <main className="mx-6 md:mx-8 lg:mx-16">
         <Section className="flex items-center" name="about">
           <h1 className="my-4 font-semibold">
             <span className="block font-normal">Hi, my name is</span>{" "}
-            <span className="text-min-2xl header block md:mb-6 md:mt-2">
+            <span className="text-min-2xl header block md:mb-5 md:mt-1">
               Vladislav Brakalo
             </span>
           </h1>
-          <p className="-mt-1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-            praesentium, reprehenderit quos a voluptatibus voluptatum ipsa quia
-            nemo inventore eum.
-          </p>
+          <article className="-mt-1 max-w-4xl">
+            <p>
+              I'm a student studying software engineering at Donetsk National
+              Technical University.
+            </p>
+            <p>
+              In spare time, I create{" "}
+              <a className="link" href="https://github.com/VladBrok/">
+                personal projects
+              </a>{" "}
+              and contribute to open source software.
+            </p>
+            <div className="my-2">
+              For example, I've contributed to:{" "}
+              <ul className="my-1">
+                <li className="list-item">
+                  <a
+                    className="link"
+                    href="https://github.com/MitchellMarkGeorge/TabButler"
+                  >
+                    TabButler
+                  </a>
+                  , a browser extension for managing tabs
+                </li>
+                <li className="list-item">
+                  {" "}
+                  <a
+                    className="link"
+                    href="https://github.com/rohitdasu/projectmate"
+                  >
+                    Projectmate
+                  </a>
+                  , a site for searching open source projects
+                </li>
+              </ul>
+            </div>
+            <p>
+              You can contact me via{" "}
+              <a className="link" href="https://t.me/VladBrok">
+                Telegram
+              </a>{" "}
+              or Discord (VladBrok#3994).
+            </p>
+          </article>
         </Section>
 
         <Section className="text-center" name="projects">
           <h2 className="text-min-xl header my-8 font-semibold">Projects</h2>
-          <div className="grid auto-rows-fr gap-10 md:grid-cols-2 xl:grid-cols-3">
+          <div className="flex flex-wrap justify-center gap-16 sm:gap-20 lg:gap-28">
             {projects}
           </div>
         </Section>
