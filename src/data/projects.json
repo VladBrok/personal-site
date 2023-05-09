@@ -34,7 +34,7 @@
     "description": "This application allows you to quickly navigate between folders. It supports commands such as creating an alias for a folder, deleting an alias, cancelling previous commands and more. This app is also available for two operating systems: Windows and Linux.",
     "imageUrls": ["/images/navigatio/1.png", "/images/navigatio/2.png"],
     "pathToImages": "/images/navigatio/",
-    "demoUrl": "https://screenrec.com/share/RJh5qOrtn0",
+    "demoUrl": "https://github.com/VladBrok/navigatio/blob/master/assets/videos/demo.gif",
     "codeUrl": "https://github.com/VladBrok/navigatio",
     "technologies": ["csharp", "bash"]
   }
