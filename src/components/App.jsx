@@ -68,6 +68,15 @@ export default function App() {
                 <li className="list-item">
                   <a
                     className="link"
+                    href="https://github.com/mre/vscode-snippet"
+                  >
+                    vscode-snippet
+                  </a>
+                  , a Visual Studio Code extension for cht.sh
+                </li>
+                <li className="list-item">
+                  <a
+                    className="link"
                     href="https://github.com/MitchellMarkGeorge/TabButler"
                   >
                     TabButler
@@ -86,6 +95,10 @@ export default function App() {
                 </li>
               </ul>
             </div>
+            <p className="mb-2">
+              Also, I have six months of work experience as a junior frontend
+              developer.
+            </p>
             <p>
               You can contact me via{" "}
               <a className="link" href="https://t.me/VladBrok">
