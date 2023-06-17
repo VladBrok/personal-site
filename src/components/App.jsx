@@ -10,6 +10,7 @@ import PROJECTS from "../data/projects.json";
 import MENU_ITEMS from "../data/menuItems.json";
 import { changeTheme, getCurrentTheme } from "../lib/theme";
 import { useState } from "react";
+import { useMemo } from "react";
 
 export default function App() {
   const [theme, setTheme] = useState(() => getCurrentTheme());
@@ -31,6 +32,8 @@ export default function App() {
       ))}
     </Project>
   ));
+
+  const year = useMemo(() => new Date().getFullYear(), []);
 
   return (
     <>
@@ -138,7 +141,7 @@ export default function App() {
             </span>
           </a>
         </div>
-        <p className="mt-4">Copyright (c) 2022 Vladislav Brakalo</p>
+        <p className="mt-4">Copyright (c) {year} Vladislav Brakalo</p>
       </footer>
     </>
   );
