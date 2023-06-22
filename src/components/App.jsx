@@ -107,7 +107,7 @@ export default function App() {
               <a className="link" href="https://t.me/VladBrok">
                 Telegram
               </a>{" "}
-              or Discord (VladBrok#3994).
+              or Discord (VladBrok).
             </p>
           </article>
         </Section>
