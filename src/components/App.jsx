@@ -87,7 +87,6 @@ export default function App() {
                   , a browser extension for managing tabs
                 </li>
                 <li className="list-item">
-                  {" "}
                   <a
                     className="link"
                     href="https://github.com/rohitdasu/projectmate"
@@ -96,10 +95,19 @@ export default function App() {
                   </a>
                   , a site for searching open source projects
                 </li>
+                <li className="list-item">
+                  <a
+                    className="link"
+                    href="https://github.com/HaaLeo/publish-vscode-extension"
+                  >
+                    publish-vscode-extension
+                  </a>
+                  , a github action for publishing vscode extensions
+                </li>
               </ul>
             </div>
             <p className="mb-2">
-              Also, I have six months of work experience as a junior frontend
+              I also have six months of work experience as a junior frontend
               developer.
             </p>
             <p>
