@@ -107,7 +107,7 @@ export default function App() {
               </ul>
             </div>
             <p className="mb-2">
-              I also have six months of work experience as a junior frontend
+              I also have 1 year of work experience as a junior frontend
               developer.
             </p>
             <p>
