@@ -55,19 +55,26 @@ export default function App() {
           </h1>
           <article className="-mt-1 max-w-4xl">
             <p>
-              I'm a student studying software engineering at Donetsk National
-              Technical University.
+              I'm a software engineer with 1 year of commercial experience and a
+              computer science background.
             </p>
-            <p>
+            <p className="mt-2">
               In spare time, I create{" "}
               <a className="link" href="https://github.com/VladBrok/">
                 personal projects
               </a>{" "}
               and contribute to open source software.
             </p>
-            <div className="my-2">
+            <div>
               For example, I've contributed to:{" "}
               <ul className="my-1">
+                <li className="list-item">
+                  <a className="link" href="https://github.com/logux">
+                    logux
+                  </a>
+                  , a client-server communication framework based on Optimistic
+                  UI, CRDT, and log
+                </li>
                 <li className="list-item">
                   <a
                     className="link"
@@ -106,11 +113,7 @@ export default function App() {
                 </li>
               </ul>
             </div>
-            <p className="mb-2">
-              I also have 1 year of work experience as a junior frontend
-              developer.
-            </p>
-            <p>
+            <p className="mt-2">
               You can contact me via{" "}
               <a className="link" href="https://t.me/VladBrok">
                 Telegram
