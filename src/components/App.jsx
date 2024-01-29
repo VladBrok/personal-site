@@ -1,16 +1,15 @@
+import { useMemo, useState } from "react";
+import MENU_ITEMS from "../data/menuItems.json";
+import PROJECTS from "../data/projects.json";
+import TECHNOLOGIES from "../data/technologies";
+import { changeTheme, getCurrentTheme } from "../lib/theme";
+import ContactForm from "./ContactForm";
 import Menu from "./Menu";
 import Project from "./Project";
-import Technology from "./Technology";
 import Section from "./Section";
-import ContactForm from "./ContactForm";
+import Technology from "./Technology";
 import TechnologyIcon from "./TechnologyIcon";
 import ThemeSelect from "./ThemeSelect";
-import TECHNOLOGIES from "../data/technologies";
-import PROJECTS from "../data/projects.json";
-import MENU_ITEMS from "../data/menuItems.json";
-import { changeTheme, getCurrentTheme } from "../lib/theme";
-import { useState } from "react";
-import { useMemo } from "react";
 
 export default function App() {
   const [theme, setTheme] = useState(() => getCurrentTheme());
@@ -55,8 +54,8 @@ export default function App() {
           </h1>
           <article className="-mt-1 max-w-4xl">
             <p>
-              I'm a software engineer with 1 year of commercial experience and a
-              computer science background.
+              I'm a software engineer with 1.5+ years of commercial experience
+              and a computer science background.
             </p>
             <p className="mt-2">
               In spare time, I create{" "}
@@ -118,7 +117,10 @@ export default function App() {
               <a className="link" href="https://t.me/VladBrok">
                 Telegram
               </a>{" "}
-              or Discord (VladBrok).
+              or{" "}
+              <a className="link" href="mailto:vlad.brok99@gmail.com">
+                Email
+              </a>
             </p>
           </article>
         </Section>
