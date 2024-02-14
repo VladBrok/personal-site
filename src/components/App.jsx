@@ -84,6 +84,12 @@ export default function App() {
                   , a Visual Studio Code extension for cht.sh
                 </li>
                 <li className="list-item">
+                  <a className="link" href="https://github.com/logux/vuex">
+                    logux Vuex
+                  </a>
+                  , Vuex compatible API for Logux
+                </li>
+                <li className="list-item">
                   <a
                     className="link"
                     href="https://github.com/MitchellMarkGeorge/TabButler"
