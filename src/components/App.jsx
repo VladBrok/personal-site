@@ -68,11 +68,13 @@ export default function App() {
               For example, I've contributed to:{" "}
               <ul className="my-1">
                 <li className="list-item">
-                  <a className="link" href="https://github.com/logux">
-                    logux
+                  <a
+                    className="link"
+                    href="https://github.com/postcss/postcss-dark-theme-class"
+                  >
+                    PostCSS Dark Theme Class
                   </a>
-                  , a client-server communication framework based on Optimistic
-                  UI, CRDT, and log
+                  , PostCSS plugin to make dark/light theme switcher
                 </li>
                 <li className="list-item">
                   <a
@@ -82,6 +84,13 @@ export default function App() {
                     vscode-snippet
                   </a>
                   , a Visual Studio Code extension for cht.sh
+                </li>
+                <li className="list-item">
+                  <a className="link" href="https://github.com/logux">
+                    logux
+                  </a>
+                  , a client-server communication framework based on Optimistic
+                  UI, CRDT, and log
                 </li>
                 <li className="list-item">
                   <a className="link" href="https://github.com/logux/vuex">
