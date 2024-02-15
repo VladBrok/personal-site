@@ -11,8 +11,18 @@
       "/images/payback/6.png"
     ],
     "pathToImages": "/images/payback/",
-    "demoUrl": "https://donut-preprod.my.to/",
-    "dbSchemaUrl": "https://drive.google.com/file/d/168yPgpH9S-rqm3JIsRcEmFU8t_pWAPrY/view",
+    "links": [
+      {
+        "name": "Demo",
+        "icon": "demo",
+        "url": "https://donut-preprod.my.to/"
+      },
+      {
+        "name": "DB schema",
+        "icon": "db",
+        "url": "https://drive.google.com/file/d/168yPgpH9S-rqm3JIsRcEmFU8t_pWAPrY/view"
+      }
+    ],
     "technologies": [
       "logux",
       "quasar",
@@ -39,8 +49,18 @@
       "/images/payback/6.png"
     ],
     "pathToImages": "/images/payback/",
-    "demoUrl": "https://payback-store.vercel.app/",
-    "codeUrl": "https://github.com/VladBrok/payback/",
+    "links": [
+      {
+        "name": "Demo",
+        "icon": "demo",
+        "url": "https://payback-store.vercel.app/"
+      },
+      {
+        "name": "Code",
+        "icon": "code",
+        "url": "https://github.com/VladBrok/payback/"
+      }
+    ],
     "technologies": ["nextjs", "react", "javascript", "sass", "mysql"]
   },
   {
@@ -53,8 +73,18 @@
       "/images/employment-agency/4.png"
     ],
     "pathToImages": "/images/employment-agency/",
-    "demoUrl": "https://employmentagency.surge.sh",
-    "codeUrl": "https://github.com/VladBrok/employment-agency/",
+    "links": [
+      {
+        "name": "Demo",
+        "icon": "demo",
+        "url": "https://employmentagency.surge.sh"
+      },
+      {
+        "name": "Code",
+        "icon": "code",
+        "url": "https://github.com/VladBrok/employment-agency/"
+      }
+    ],
     "technologies": ["html5", "css3", "javascript", "postgresql", "csharp"]
   },
   {
@@ -62,8 +92,18 @@
     "description": "This application allows you to quickly navigate between folders.<br>It supports commands such as creating an alias for a folder, deleting an alias, cancelling previous commands and more.<br>This app is also available for two operating systems: Windows and Linux.",
     "imageUrls": ["/images/navigatio/1.png", "/images/navigatio/2.png"],
     "pathToImages": "/images/navigatio/",
-    "demoUrl": "https://github.com/VladBrok/navigatio/blob/master/assets/videos/demo.gif",
-    "codeUrl": "https://github.com/VladBrok/navigatio",
+    "links": [
+      {
+        "name": "Demo",
+        "icon": "demo",
+        "url": "https://github.com/VladBrok/navigatio/blob/master/assets/videos/demo.gif"
+      },
+      {
+        "name": "Code",
+        "icon": "code",
+        "url": "https://github.com/VladBrok/navigatio"
+      }
+    ],
     "technologies": ["csharp", "bash"]
   }
 ]

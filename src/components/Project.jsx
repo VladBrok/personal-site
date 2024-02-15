@@ -5,12 +5,16 @@ import FlipCardButton from "./FlipCardButton";
 import Gallery from "./Gallery";
 import ProjectLink from "./ProjectLink";
 
+const icons = {
+  demo: HiOutlineStatusOnline,
+  code: BsFileEarmarkCode,
+  db: BsDatabase,
+};
+
 export default function Project({
   title,
   imageUrls,
-  demoUrl,
-  codeUrl,
-  dbSchemaUrl,
+  links,
   description,
   children,
 }) {
@@ -26,6 +30,15 @@ export default function Project({
 
   const rotation = isRotated ? "rotate-y-180" : "";
   const backVisibility = isRotated ? "visible" : "invisible";
+  const projectLinks = links.map((link, i) => (
+    <ProjectLink
+      key={i}
+      url={link.url}
+      Icon={icons[link.icon]}
+      name={link.name}
+      screenReaderOnlyName={title}
+    />
+  ));
 
   return (
     <>
@@ -53,31 +66,7 @@ export default function Project({
           <div
             className={`${backVisibility} rotate-y-180 absolute top-0 flex h-full w-full flex-col [backface-visibility:hidden] [transition:visibility_0.5s]`}
           >
-            <div className="mt-auto px-8">
-              {/* TODO: maybe render urls dynamically, i.e. smth like ({ name: demo, icon: smth... }) */}
-              <ProjectLink
-                url={demoUrl}
-                Icon={HiOutlineStatusOnline}
-                name="Demo"
-                screenReaderOnlyName={title}
-              />
-              {codeUrl && (
-                <ProjectLink
-                  url={codeUrl}
-                  Icon={BsFileEarmarkCode}
-                  name="Code"
-                  screenReaderOnlyName={title}
-                />
-              )}
-              {dbSchemaUrl && (
-                <ProjectLink
-                  url={dbSchemaUrl}
-                  Icon={BsDatabase}
-                  name="DB schema"
-                  screenReaderOnlyName={title}
-                />
-              )}
-            </div>
+            <div className="mt-auto px-8">{projectLinks}</div>
             <FlipCardButton onClick={handleBackArrowClick} />
           </div>
         </div>
