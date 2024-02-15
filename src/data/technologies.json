@@ -19,5 +19,6 @@
   "nodejs": { "name": "Node.js", "isColored": true },
   "typescript": { "name": "TypeScript", "isColored": true },
   "supabase": { "name": "Supabase", "isColored": true },
-  "oracle": { "name": "Oracle cloud", "isColored": true }
+  "oracle": { "name": "Oracle cloud", "isColored": true },
+  "stripe": { "name": "Stripe", "isSvg": true }
 }
