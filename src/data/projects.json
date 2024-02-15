@@ -12,6 +12,7 @@
     ],
     "pathToImages": "/images/payback/",
     "demoUrl": "https://donut-preprod.my.to/",
+    "dbSchemaUrl": "https://drive.google.com/file/d/168yPgpH9S-rqm3JIsRcEmFU8t_pWAPrY/view",
     "technologies": [
       "logux",
       "quasar",

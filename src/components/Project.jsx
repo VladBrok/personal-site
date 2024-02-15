@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BsFileEarmarkCode } from "react-icons/bs";
+import { BsDatabase, BsFileEarmarkCode } from "react-icons/bs";
 import { HiOutlineStatusOnline } from "react-icons/hi";
 import FlipCardButton from "./FlipCardButton";
 import Gallery from "./Gallery";
@@ -10,6 +10,7 @@ export default function Project({
   imageUrls,
   demoUrl,
   codeUrl,
+  dbSchemaUrl,
   description,
   children,
 }) {
@@ -53,6 +54,7 @@ export default function Project({
             className={`${backVisibility} rotate-y-180 absolute top-0 flex h-full w-full flex-col [backface-visibility:hidden] [transition:visibility_0.5s]`}
           >
             <div className="mt-auto px-8">
+              {/* TODO: maybe render urls dynamically, i.e. smth like ({ name: demo, icon: smth... }) */}
               <ProjectLink
                 url={demoUrl}
                 Icon={HiOutlineStatusOnline}
@@ -64,6 +66,14 @@ export default function Project({
                   url={codeUrl}
                   Icon={BsFileEarmarkCode}
                   name="Code"
+                  screenReaderOnlyName={title}
+                />
+              )}
+              {dbSchemaUrl && (
+                <ProjectLink
+                  url={dbSchemaUrl}
+                  Icon={BsDatabase}
+                  name="DB schema"
                   screenReaderOnlyName={title}
                 />
               )}
