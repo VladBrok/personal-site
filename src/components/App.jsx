@@ -27,6 +27,7 @@ export default function App() {
           id={techId}
           name={TECHNOLOGIES[techId].name}
           isColored={TECHNOLOGIES[techId].isColored}
+          isSvg={TECHNOLOGIES[techId].isSvg}
         />
       ))}
     </Project>

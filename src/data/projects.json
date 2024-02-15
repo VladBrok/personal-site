@@ -1,5 +1,47 @@
 [
   {
+    "title": "Donut, POS for restaurants",
+    "description": "Fully-realtime cloud-based POS for restaurants.<br>Supports 3 order types: dine-in, takeout, delivery.<br>Has 5 user roles: admin, client, waiter, cook, courier.<br>Includes 5 applications: kitchen display, courier app, client app, admin panel, waiter app.<br>Sends real-time in-app and email notifications.<br>Integrates with Stripe to support Credit Card and Blik payments.<br>Uses WYSIWYG editor for dish descriptions.",
+    "imageUrls": [
+      "/images/donut/10.png",
+      "/images/donut/11.png",
+      "/images/donut/12.png",
+      "/images/donut/13.png",
+      "/images/donut/14.png",
+      "/images/donut/15.png",
+      "/images/donut/16.png",
+      "/images/donut/17.png",
+      "/images/donut/18.png",
+      "/images/donut/19.png"
+    ],
+    "pathToImages": "/images/donut/",
+    "links": [
+      {
+        "name": "Demo",
+        "icon": "demo",
+        "url": "https://donut-preprod.my.to/demo"
+      },
+      {
+        "name": "DB schema",
+        "icon": "db",
+        "url": "https://drive.google.com/file/d/168yPgpH9S-rqm3JIsRcEmFU8t_pWAPrY/view"
+      }
+    ],
+    "technologies": [
+      "logux",
+      "quasar",
+      "vuejs",
+      "postgresql",
+      "drizzleorm",
+      "nodejs",
+      "typescript",
+      "sass",
+      "stripe",
+      "supabase",
+      "oracle"
+    ]
+  },
+  {
     "title": "Payback, an e-commerce site",
     "description": "This pet project is an e-commerce store where users can buy and sell products. In addition, users can leave reviews of purchased products and communicate with each other using the built-in messenger.",
     "imageUrls": [
@@ -11,13 +53,23 @@
       "/images/payback/6.png"
     ],
     "pathToImages": "/images/payback/",
-    "demoUrl": "https://payback-store.vercel.app/",
-    "codeUrl": "https://github.com/VladBrok/payback/",
+    "links": [
+      {
+        "name": "Demo",
+        "icon": "demo",
+        "url": "https://payback-store.vercel.app/"
+      },
+      {
+        "name": "Code",
+        "icon": "code",
+        "url": "https://github.com/VladBrok/payback/"
+      }
+    ],
     "technologies": ["nextjs", "react", "javascript", "sass", "mysql"]
   },
   {
     "title": "Employment Agency, a coursework",
-    "description": "This project was necessary to complete the university course \"Databases\". I wrote almost the entire front end of the site using vanilla JavaScript, which allowed me to deepen my knowledge of this programming language and served as a good basis for studying frameworks such as React.",
+    "description": "This project was necessary to complete the university course \"Databases\".<br>I wrote almost the entire front end of the site using vanilla JavaScript, which allowed me to deepen my knowledge of this programming language and served as a good basis for studying frameworks such as React.",
     "imageUrls": [
       "/images/employment-agency/1.png",
       "/images/employment-agency/2.png",
@@ -25,17 +77,37 @@
       "/images/employment-agency/4.png"
     ],
     "pathToImages": "/images/employment-agency/",
-    "demoUrl": "https://employmentagency.surge.sh",
-    "codeUrl": "https://github.com/VladBrok/employment-agency/",
+    "links": [
+      {
+        "name": "Demo",
+        "icon": "demo",
+        "url": "https://employmentagency.surge.sh"
+      },
+      {
+        "name": "Code",
+        "icon": "code",
+        "url": "https://github.com/VladBrok/employment-agency/"
+      }
+    ],
     "technologies": ["html5", "css3", "javascript", "postgresql", "csharp"]
   },
   {
     "title": "Navigatio, a CLI app",
-    "description": "This application allows you to quickly navigate between folders. It supports commands such as creating an alias for a folder, deleting an alias, cancelling previous commands and more. This app is also available for two operating systems: Windows and Linux.",
+    "description": "This application allows you to quickly navigate between folders.<br>It supports commands such as creating an alias for a folder, deleting an alias, cancelling previous commands and more.<br>This app is also available for two operating systems: Windows and Linux.",
     "imageUrls": ["/images/navigatio/1.png", "/images/navigatio/2.png"],
     "pathToImages": "/images/navigatio/",
-    "demoUrl": "https://github.com/VladBrok/navigatio/blob/master/assets/videos/demo.gif",
-    "codeUrl": "https://github.com/VladBrok/navigatio",
+    "links": [
+      {
+        "name": "Demo",
+        "icon": "demo",
+        "url": "https://github.com/VladBrok/navigatio/blob/master/assets/videos/demo.gif"
+      },
+      {
+        "name": "Code",
+        "icon": "code",
+        "url": "https://github.com/VladBrok/navigatio"
+      }
+    ],
     "technologies": ["csharp", "bash"]
   }
 ]

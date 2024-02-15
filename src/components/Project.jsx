@@ -1,15 +1,20 @@
-import FlipCardButton from "./FlipCardButton";
-import ProjectLink from "./ProjectLink";
-import Gallery from "./Gallery";
 import { useState } from "react";
+import { BsDatabase, BsFileEarmarkCode } from "react-icons/bs";
 import { HiOutlineStatusOnline } from "react-icons/hi";
-import { BsFileEarmarkCode } from "react-icons/bs";
+import FlipCardButton from "./FlipCardButton";
+import Gallery from "./Gallery";
+import ProjectLink from "./ProjectLink";
+
+const icons = {
+  demo: HiOutlineStatusOnline,
+  code: BsFileEarmarkCode,
+  db: BsDatabase,
+};
 
 export default function Project({
   title,
   imageUrls,
-  demoUrl,
-  codeUrl,
+  links,
   description,
   children,
 }) {
@@ -25,10 +30,19 @@ export default function Project({
 
   const rotation = isRotated ? "rotate-y-180" : "";
   const backVisibility = isRotated ? "visible" : "invisible";
+  const projectLinks = links.map((link, i) => (
+    <ProjectLink
+      key={i}
+      url={link.url}
+      Icon={icons[link.icon]}
+      name={link.name}
+      screenReaderOnlyName={title}
+    />
+  ));
 
   return (
     <>
-      <div className="max-w-[24rem] [perspective:1000px]">
+      <div className="max-w-[28rem] [perspective:1000px]">
         <div
           className={`${rotation} shadow-around relative flex h-full w-full flex-col items-center rounded-2xl shadow-lightgray [transition:transform_1s] [transform-style:preserve-3d] dark:shadow-gray`}
         >
@@ -38,7 +52,10 @@ export default function Project({
               <h3 className="text-min-lg text-contrast my-4 font-semibold sm:my-6">
                 {title}
               </h3>
-              <p className="mb-6">{description}</p>
+              <p
+                className="mb-6"
+                dangerouslySetInnerHTML={{ __html: description }}
+              ></p>
               <div className="text-contrast mt-auto mb-3 flex flex-wrap justify-center">
                 {children}
               </div>
@@ -49,20 +66,7 @@ export default function Project({
           <div
             className={`${backVisibility} rotate-y-180 absolute top-0 flex h-full w-full flex-col [backface-visibility:hidden] [transition:visibility_0.5s]`}
           >
-            <div className="mt-auto px-8">
-              <ProjectLink
-                url={demoUrl}
-                Icon={HiOutlineStatusOnline}
-                name="Demo"
-                screenReaderOnlyName={title}
-              />
-              <ProjectLink
-                url={codeUrl}
-                Icon={BsFileEarmarkCode}
-                name="Code"
-                screenReaderOnlyName={title}
-              />
-            </div>
+            <div className="mt-auto px-8">{projectLinks}</div>
             <FlipCardButton onClick={handleBackArrowClick} />
           </div>
         </div>

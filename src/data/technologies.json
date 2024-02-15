@@ -11,5 +11,14 @@
   "mysql": { "name": "MySql", "isColored": true },
   "csharp": { "name": "CSharp", "isColored": true },
   "bash": { "name": "bash", "isColored": false },
-  "postgresql": { "name": "PostgreSQL", "isColored": true }
+  "postgresql": { "name": "PostgreSQL", "isColored": true },
+  "logux": { "name": "Logux", "isSvg": true },
+  "quasar": { "name": "Quasar", "isColored": true },
+  "vuejs": { "name": "Vue", "isSvg": true },
+  "drizzleorm": { "name": "Drizzle ORM", "isSvg": true },
+  "nodejs": { "name": "Node.js", "isColored": true },
+  "typescript": { "name": "TypeScript", "isColored": true },
+  "supabase": { "name": "Supabase", "isColored": true },
+  "oracle": { "name": "Oracle cloud", "isColored": true },
+  "stripe": { "name": "Stripe", "isSvg": true }
 }
