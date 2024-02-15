@@ -3,20 +3,20 @@
     "title": "Donut, POS for restaurants",
     "description": "Fully-realtime cloud-based POS for restaurants.<br>Supports 3 order types: dine-in, takeout, delivery.<br>Has 5 user roles: admin, client, waiter, cook, courier.<br>Includes 5 applications: kitchen display, courier app, client app, admin panel, waiter app.<br>Sends real-time in-app and email notifications.<br>Integrates with Stripe to support Credit Card and Blik payments.<br>Uses WYSIWYG editor for dish descriptions.",
     "imageUrls": [
-      "/images/payback/1.png",
-      "/images/payback/2.png",
-      "/images/payback/3.png",
-      "/images/payback/4.png",
-      "/images/payback/5.png",
-      "/images/payback/6.png"
+      "/images/donut/10.png",
+      "/images/donut/11.png",
+      "/images/donut/12.png",
+      "/images/donut/13.png",
+      "/images/donut/14.png",
+      "/images/donut/15.png",
+      "/images/donut/16.png",
+      "/images/donut/17.png",
+      "/images/donut/18.png",
+      "/images/donut/19.png"
     ],
-    "pathToImages": "/images/payback/",
+    "pathToImages": "/images/donut/",
     "links": [
-      {
-        "name": "Demo",
-        "icon": "demo",
-        "url": "https://donut-preprod.my.to/"
-      },
+      { "name": "Demo", "icon": "demo", "url": "https://donut-preprod.my.to/" },
       {
         "name": "DB schema",
         "icon": "db",
