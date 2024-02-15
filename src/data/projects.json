@@ -16,7 +16,11 @@
     ],
     "pathToImages": "/images/donut/",
     "links": [
-      { "name": "Demo", "icon": "demo", "url": "https://donut-preprod.my.to/" },
+      {
+        "name": "Demo",
+        "icon": "demo",
+        "url": "https://donut-preprod.my.to/demo"
+      },
       {
         "name": "DB schema",
         "icon": "db",
