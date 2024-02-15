@@ -8,7 +8,7 @@
     "preview": "node scripts/add-image-urls.mjs && vite preview"
   },
   "dependencies": {
-    "devicon": "^2.15.1",
+    "devicon": "^2.16.0",
     "embla-carousel-react": "^7.0.1",
     "focus-trap-react": "^9.0.2",
     "react": "^18.0.0",
