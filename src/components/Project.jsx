@@ -1,9 +1,9 @@
-import FlipCardButton from "./FlipCardButton";
-import ProjectLink from "./ProjectLink";
-import Gallery from "./Gallery";
 import { useState } from "react";
-import { HiOutlineStatusOnline } from "react-icons/hi";
 import { BsFileEarmarkCode } from "react-icons/bs";
+import { HiOutlineStatusOnline } from "react-icons/hi";
+import FlipCardButton from "./FlipCardButton";
+import Gallery from "./Gallery";
+import ProjectLink from "./ProjectLink";
 
 export default function Project({
   title,
@@ -38,7 +38,10 @@ export default function Project({
               <h3 className="text-min-lg text-contrast my-4 font-semibold sm:my-6">
                 {title}
               </h3>
-              <p className="mb-6">{description}</p>
+              <p
+                className="mb-6"
+                dangerouslySetInnerHTML={{ __html: description }}
+              ></p>
               <div className="text-contrast mt-auto mb-3 flex flex-wrap justify-center">
                 {children}
               </div>
@@ -56,12 +59,14 @@ export default function Project({
                 name="Demo"
                 screenReaderOnlyName={title}
               />
-              <ProjectLink
-                url={codeUrl}
-                Icon={BsFileEarmarkCode}
-                name="Code"
-                screenReaderOnlyName={title}
-              />
+              {codeUrl && (
+                <ProjectLink
+                  url={codeUrl}
+                  Icon={BsFileEarmarkCode}
+                  name="Code"
+                  screenReaderOnlyName={title}
+                />
+              )}
             </div>
             <FlipCardButton onClick={handleBackArrowClick} />
           </div>

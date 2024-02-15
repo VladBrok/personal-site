@@ -1,5 +1,31 @@
 [
   {
+    "title": "Donut, POS for restaurants",
+    "description": "This pet project is an e-commerce store where users can buy and sell products. In addition, users can leave reviews of purchased products and communicate with each other using the built-in messenger.",
+    "imageUrls": [
+      "/images/payback/1.png",
+      "/images/payback/2.png",
+      "/images/payback/3.png",
+      "/images/payback/4.png",
+      "/images/payback/5.png",
+      "/images/payback/6.png"
+    ],
+    "pathToImages": "/images/payback/",
+    "demoUrl": "https://donut-preprod.my.to/",
+    "technologies": [
+      "logux",
+      "quasar",
+      "vuejs",
+      "postgresql",
+      "drizzleorm",
+      "nodejs",
+      "typescript",
+      "sass",
+      "supabase",
+      "oracle"
+    ]
+  },
+  {
     "title": "Payback, an e-commerce site",
     "description": "This pet project is an e-commerce store where users can buy and sell products. In addition, users can leave reviews of purchased products and communicate with each other using the built-in messenger.",
     "imageUrls": [
