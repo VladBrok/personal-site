@@ -56,7 +56,14 @@ export default function App() {
           <article className="-mt-1 max-w-4xl">
             <p>
               I'm a software engineer with 1.5+ years of commercial experience
-              and a computer science background.
+              and a computer science background. I'm also a co-maintainer of{" "}
+              <a
+                className="link"
+                href="https://marketplace.visualstudio.com/items?itemName=vscode-snippet.Snippet"
+              >
+                VSCode extension "vscode-snippet"
+              </a>
+              .
             </p>
             <p className="mt-2">
               In spare time, I create{" "}
