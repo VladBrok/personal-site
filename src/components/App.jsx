@@ -94,6 +94,12 @@ export default function App() {
                   UI, CRDT, and log
                 </li>
                 <li className="list-item">
+                  <a className="link" href="https://github.com/ai/keyux">
+                    keyux
+                  </a>
+                  , JS library to improve keyboard UI of web apps
+                </li>
+                <li className="list-item">
                   <a className="link" href="https://github.com/logux/vuex">
                     logux Vuex
                   </a>
@@ -175,4 +181,3 @@ export default function App() {
     </>
   );
 }
- 
