@@ -78,6 +78,16 @@ export default function App() {
                 <li className="list-item">
                   <a
                     className="link"
+                    href="https://github.com/quasarframework/quasar"
+                  >
+                    Quasar
+                  </a>
+                  , Developer-oriented, front-end framework with VueJS
+                  components
+                </li>
+                <li className="list-item">
+                  <a
+                    className="link"
                     href="https://github.com/postcss/postcss-dark-theme-class"
                   >
                     PostCSS Dark Theme Class

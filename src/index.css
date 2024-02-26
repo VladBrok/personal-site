@@ -30,7 +30,7 @@
   }
 
   .list-item {
-    @apply ml-8 list-disc;
+    @apply ml-8 mb-1 list-disc;
   }
 
   .section {
