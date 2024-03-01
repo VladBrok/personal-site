@@ -7,6 +7,7 @@ import ContactForm from "./ContactForm";
 import Menu from "./Menu";
 import Project from "./Project";
 import Section from "./Section";
+import SectionTitle from "./SectionTitle";
 import Technology from "./Technology";
 import TechnologyIcon from "./TechnologyIcon";
 import ThemeSelect from "./ThemeSelect";
@@ -165,7 +166,9 @@ export default function App() {
         </Section>
 
         <Section className="text-center" name="projects">
-          <h2 className="text-min-xl header my-8 font-semibold">Projects</h2>
+          <div className="my-8">
+            <SectionTitle text={"Projects"} />
+          </div>
           <div className="flex flex-wrap justify-center gap-16 sm:gap-20 lg:gap-28">
             {projects}
           </div>
@@ -175,7 +178,7 @@ export default function App() {
           className="mt-28 flex items-center justify-center text-center"
           name="contact"
         >
-          <h2 className="text-min-xl header font-semibold">Contact me</h2>
+          <SectionTitle text={"Contact me"} />
           <ContactForm />
         </Section>
       </main>
