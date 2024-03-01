@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import MENU_ITEMS from "../data/menuItems.json";
 import PROJECTS from "../data/projects.json";
 import TECHNOLOGIES from "../data/technologies";
@@ -19,6 +19,16 @@ export default function App() {
     changeTheme(newTheme);
     setTheme(newTheme);
   }
+
+  useEffect(() => {
+    const hash = window.location.hash?.trim() || "";
+    if (!hash) {
+      return;
+    }
+
+    const el = document.getElementById(hash.slice(1));
+    el?.scrollIntoView();
+  });
 
   const projects = PROJECTS.map(data => (
     <Project key={data.title} {...data}>
@@ -167,7 +177,7 @@ export default function App() {
 
         <Section className="text-center" name="projects">
           <div className="my-8">
-            <SectionTitle text={"Projects"} />
+            <SectionTitle text="Projects" id="projects" />
           </div>
           <div className="flex flex-wrap justify-center gap-16 sm:gap-20 lg:gap-28">
             {projects}
@@ -178,7 +188,7 @@ export default function App() {
           className="mt-28 flex items-center justify-center text-center"
           name="contact"
         >
-          <SectionTitle text={"Contact me"} />
+          <SectionTitle text="Contact me" id="contact" />
           <ContactForm />
         </Section>
       </main>
