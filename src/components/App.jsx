@@ -64,19 +64,24 @@ export default function App() {
               Vladislav Brakalo
             </span>
           </h1>
-          <article className="-mt-1 max-w-4xl">
-            <p>
-              I'm a software engineer with 1.5+ years of commercial experience
-              and a computer science background. I'm also a co-maintainer of{" "}
-              <a
-                className="link"
-                href="https://marketplace.visualstudio.com/items?itemName=vscode-snippet.Snippet"
-              >
-                VSCode extension "vscode-snippet"
-              </a>
-              .
-            </p>
-            <p className="mt-2">
+          <article className="max-w-4xl">
+            <div>
+              <p>
+                I'm a software engineer with 1.5+ years of commercial experience
+                and a computer science background.
+              </p>
+              <p>
+                I'm also a co-maintainer of{" "}
+                <a
+                  className="link"
+                  href="https://marketplace.visualstudio.com/items?itemName=vscode-snippet.Snippet"
+                >
+                  VSCode extension "vscode-snippet"
+                </a>
+                .
+              </p>
+            </div>
+            <p className="mt-4">
               In spare time, I create{" "}
               <a className="link" href="https://github.com/VladBrok/">
                 personal projects
