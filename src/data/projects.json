@@ -1,7 +1,7 @@
 [
   {
     "title": "Donut, POS for restaurants",
-    "description": "Fully-realtime cloud-based POS for restaurants.<br>Supports 3 order types: dine-in, takeout, delivery.<br>Has 5 user roles: admin, client, waiter, cook, courier.<br>Includes 5 applications: kitchen display, courier app, client app, admin panel, waiter app.<br>Sends real-time in-app and email notifications.<br>Integrates with Stripe to support Credit Card and Blik payments.<br>Uses WYSIWYG editor for dish descriptions.",
+    "description": "<b>Fully-realtime</b> cloud-based POS for restaurants.<br>Supports <b>3 order types</b>: dine-in, takeout, delivery.<br>Has <b>5 user roles</b>: admin, client, waiter, cook, courier.<br>Includes <b>5 applications</b>: kitchen display, courier app, client app, admin panel, waiter app.<br>Sends real-time in-app and email <b>notifications</b>.<br>Integrates with <b>Stripe</b> to support Credit Card and Blik payments.",
     "imageUrls": [
       "/images/donut/10.png",
       "/images/donut/11.png",
@@ -48,7 +48,7 @@
   },
   {
     "title": "Payback, an e-commerce site",
-    "description": "This pet project is an e-commerce store where users can buy and sell products. In addition, users can leave reviews of purchased products and communicate with each other using the built-in messenger.",
+    "description": "This project is an <b>e-commerce store</b> where users can buy and sell products. In addition, users can <b>leave reviews</b> of purchased products and communicate with each other using the <b>built-in messenger</b>.",
     "imageUrls": [
       "/images/payback/1.png",
       "/images/payback/2.png",
@@ -74,7 +74,7 @@
   },
   {
     "title": "Employment Agency, a coursework",
-    "description": "This project was necessary to complete the university course \"Databases\".<br>I wrote almost the entire front end of the site using vanilla JavaScript, which allowed me to deepen my knowledge of this programming language and served as a good basis for studying frameworks such as React.",
+    "description": "This project was necessary to complete the <b>university course \"Databases\"</b>.<br>I wrote almost the entire front end of the site using <b>vanilla JavaScript</b>, which allowed me to deepen my knowledge of this programming language and served as a good basis for studying frameworks such as React.",
     "imageUrls": [
       "/images/employment-agency/1.png",
       "/images/employment-agency/2.png",
@@ -98,7 +98,7 @@
   },
   {
     "title": "Navigatio, a CLI app",
-    "description": "This application allows you to quickly navigate between folders.<br>It supports commands such as creating an alias for a folder, deleting an alias, cancelling previous commands and more.<br>This app is also available for two operating systems: Windows and Linux.",
+    "description": "This application allows you to <b>quickly navigate between folders</b>.<br>It supports commands such as creating an alias for a folder, deleting an alias, cancelling previous commands and more.<br>This app is also available for two operating systems: <b>Windows and Linux</b>.",
     "imageUrls": ["/images/navigatio/1.png", "/images/navigatio/2.png"],
     "pathToImages": "/images/navigatio/",
     "links": [
