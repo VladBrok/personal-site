@@ -22,6 +22,11 @@
         "url": "https://donut-preprod.my.to/demo"
       },
       {
+        "name": "Code",
+        "icon": "code",
+        "url": "https://github.com/VladBrok/donut-pos"
+      },
+      {
         "name": "DB schema",
         "icon": "db",
         "url": "https://drive.google.com/file/d/168yPgpH9S-rqm3JIsRcEmFU8t_pWAPrY/view"
