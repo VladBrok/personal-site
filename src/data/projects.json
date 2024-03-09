@@ -47,6 +47,25 @@
     ]
   },
   {
+    "title": "logux pagination example",
+    "description": "Example implementation of a <b>real-time</b> table with <b>pagination</b>.<br>This table supports all <b>CRUD</b> operations.<br>I also wrote <b>clear and concise documentation</b> for my solution which is available on the <a class=\"link\" href=\"https://logux.org/recipes/pagination/\">official docs website</a>.",
+    "imageUrls": ["/images/logux-pagination/1.png"],
+    "pathToImages": "/images/logux-pagination/",
+    "links": [
+      {
+        "name": "Docs",
+        "icon": "docs",
+        "url": "https://logux.org/recipes/pagination/"
+      },
+      {
+        "name": "Code",
+        "icon": "code",
+        "url": "https://github.com/VladBrok/logux-pagination-example"
+      }
+    ],
+    "technologies": ["logux", "react", "nodejs", "typescript"]
+  },
+  {
     "title": "Payback, an e-commerce site",
     "description": "This project is an <b>e-commerce store</b> where users can buy and sell products. In addition, users can <b>leave reviews</b> of purchased products and communicate with each other using the <b>built-in messenger</b>.",
     "imageUrls": [

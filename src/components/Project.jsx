@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { BsDatabase, BsFileEarmarkCode } from "react-icons/bs";
 import { HiOutlineStatusOnline } from "react-icons/hi";
+import { SlDocs } from "react-icons/sl";
 import FlipCardButton from "./FlipCardButton";
 import Gallery from "./Gallery";
 import ProjectLink from "./ProjectLink";
@@ -9,6 +10,7 @@ const icons = {
   demo: HiOutlineStatusOnline,
   code: BsFileEarmarkCode,
   db: BsDatabase,
+  docs: SlDocs,
 };
 
 export default function Project({
