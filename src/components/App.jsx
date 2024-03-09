@@ -127,6 +127,12 @@ export default function App() {
                   UI, CRDT, and log
                 </li>
                 <li className="list-item">
+                  <a className="link" href="https://github.com/logux/docs">
+                    logux docs
+                  </a>
+                  , guide, recipes, and protocol specifications for logux
+                </li>
+                <li className="list-item">
                   <a className="link" href="https://github.com/ai/keyux">
                     keyux
                   </a>
